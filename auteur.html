@@ -1,0 +1,143 @@
+
+<html>
+    <head>
+    <style>
+        body{
+            background-image: url(https://i.pinimg.com/originals/be/81/70/be8170262af5201b81ef3990911d84ff.jpg);
+            background-size: cover;
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    
+        nav{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            min-height: 8vh;
+            background-color: rgba(0, 0, 0, 0.123);
+        }
+    
+        .nul{
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            font-size: 20px;
+        }
+        .barre{
+            display: flex;
+            justify-content: space-around;
+            padding-inline-end: 40px;
+            border-color: white;
+            list-style-type: none;
+        }
+        .barre li{
+            padding: 5px;
+            margin: 5px;
+        }
+        .barre a{
+            color: white;
+            text-decoration: none;
+            letter-spacing: 3px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        .menu{
+            display:none;
+            cursor: pointer;
+        }
+        .menu div{
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 5px;
+        }
+    
+        @media screen and (max-width:768px){
+            body{
+                overflow-x: hidden;
+            }
+            .barre{
+                position: absolute;
+                top:-100%;
+                height: 92vh;
+                
+                background-color: #00000060;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 50%;
+                transform: translateY(0%);
+                transition: transform 0.5s ease-in;
+            }
+            .barre li{
+                opacity: 0;
+            }
+            .menu{
+                display:block;
+            }
+        }
+        .nav-active{
+            transform: translateY(125%);
+        }
+        @keyframes navFade{
+            from{
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to{
+                opacity: 1;
+                transform: translateX(0px)
+            }
+        }
+    </style>
+    <title>EDM site</title>
+    </head>
+    <body>
+    <header>
+        <nav>
+            <div class="nul">
+                <h1>EDM</h1>
+            </div>
+            
+            <ul class="barre">
+                <li><a href="man.html">Accueil</a></li>
+                <li><a href="auteur.html">L'auteur</a></li>
+                <li><a href="Oeuvres.html">Oeuvres </a></li>
+                <li><a href="Projets.html">Projets</a></li>
+                <li><a href="Blog.html">Blog</a></li>
+                <li><a href="News.html">News</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="menu">
+                <div class="top"></div>
+                <div class="middle"></div>
+                <div class="bottom"></div>
+            </div>
+        </nav>
+    </header>
+    
+    <script>
+        const navSlide = () =>{
+            const menu = document.querySelector('.menu');
+            const nav = document.querySelector('.barre');
+            const laBarre = document.querySelectorAll('.barre li');
+    
+            menu.addEventListener('click', () => {
+                
+                nav.classList.toggle('nav-active');
+    
+                laBarre.forEach((link,index)=>{
+                    if(link.style.animation){
+                        link.style.animation = '';
+                    }
+                    else{
+                        link.style.animation = `navFade 0.5s ease forwards ${index/7}s`;
+                    }
+                });
+            });
+        }
+        navSlide();
+    </script>
+    </body>
+    </html>
