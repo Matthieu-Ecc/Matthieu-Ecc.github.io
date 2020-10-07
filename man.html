@@ -58,7 +58,6 @@
         }
         .barre{
             position: absolute;
-            right: 0px;
             height: 92vh;
             top:8vh;
             background-color: #00000060;
@@ -66,7 +65,7 @@
             flex-direction: column;
             align-items: center;
             width: 50%;
-            transform: translateX(100%);
+            transform: translateY(-120%);
             transition: transform 0.5s ease-in;
         }
         .barre li{
@@ -131,7 +130,7 @@
                     link.style.animation = '';
                 }
                 else{
-                    link.style.animation = `navFade 0.5s ease forwards ${index/5+0.5}s`;
+                    link.style.animation = `navFade 0.5s ease forwards ${index/7}s`;
                 }
             });
         });
