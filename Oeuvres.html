@@ -4,6 +4,7 @@
     body{
         background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/1400/bc86ac75296439.5c48aa8646a3d.png);
         background-size: cover;
+        background-attachment: local;
         margin: 0px;
         padding: 0px;
         font-family: 'Courier New', Courier, monospace;
@@ -17,11 +18,7 @@
         background-color: rgba(0, 0, 0, 0.123);
     }
     nav:hover {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        min-height: 8vh;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, 0.308);
 
     }
     .h1{
@@ -33,10 +30,8 @@
         letter-spacing: 5px;
         font-size: 30px;
         padding: 5px;
-        font-weight: bold;
     }
-    .nul{
-        font-weight: bold;
+    .tit{
         color: white;
         letter-spacing: 5px;
         font-size: 20px;
@@ -59,7 +54,6 @@
         color: white;
         text-decoration: none;
         letter-spacing: 3px;
-        font-weight: bold;
         font-size: 14px;
     }
     .menu{
@@ -69,7 +63,7 @@
     .menu div{
         width: 25px;
         height: 3px;
-        background-color: white;
+        background-color: #f2f2f2;
         margin: 5px;
     }
 
@@ -125,7 +119,6 @@
         color: white;
         text-decoration: none;
         letter-spacing: 3px;
-        font-weight: bold;
         font-size: 16px;
 
     }
@@ -147,28 +140,30 @@
         filter : invert(1);
     }
     article{
-        background-color: rgba(255, 255, 255, 0.76);
+        background-color: rgba(255, 255, 255, 0.911);
         width: 50%;
         align-content: center;
         margin: auto;
         text-align: justify;
         padding: 10px;
+        font-size: 14px;
+        padding-left: 50px;
+        padding-right: 50px;
     }
     #book1{
         text-align: center;
+        filter: drop-shadow(10px 10px 3px rgba(0, 0, 0, 0.582));
     }
     .redtitle1{
-        color: red;
-        font-size: 30px;
-        
+        color: rgb(0, 0, 0);
+        font-size: 27px;
+        text-align: center;
         
     }
     .redtitle2{
-        color: red;
-        font-size: 20px;
-        
-        
-
+        color: rgb(0, 0, 0);
+        font-size: 18px;
+        text-align: center;
     }
     
         
@@ -180,7 +175,7 @@
 <header>
     <nav>
         <div class="h1">
-            <p class="nul">the </p><p class="edm">EDM</p> <p class="nul">website</p>
+            <p class="tit">the </p><p class="edm">EDM</p> <p class="tit">website</p>
         </div>
         
         <ul class="barre">
@@ -199,22 +194,23 @@
         </div>
     </nav>
 </header>
-
+<br><br><br>
 <article>
-    <br>
-    <h1 class="redtitle1">AN 3 APRÈS COVID 21 : </h1><h2 class="redtitle2">disponible le 15 octobre</h2>
+    
     <br>
     <div id="book1"><img src="covid.jpeg" height="500px"></div>
+    <br>
+    <h1 class="redtitle1">AN 3 APRÈS COVID 21 </h1><h2 class="redtitle2">disponible le 15 octobre</h2>
     <p>“Pater noster, qui es in caelis sanctificetur nomen tuum adveniat regnum tuum fiat voluntas tua sicut in caelo et in terra. 
         Panem nostrum quotidianum da nobis hodie et dimitte nobis debita nostra sicut et nos dimittimus debitoribus nostris et ne nos inducas in tentationem sed libera nos a malo. Amen.”</p>
 
         <ul>
-            <li><a href="https://www.amazon.fr/">Amazone</a></li>
+            <li><a href="https://www.amazon.fr/">Amazon</a></li>
             <li><a href="https://www.fnac.com/">Fnac </a></li>
             <li><a href="https://www.cultura.com/livre.html">Cultura</a></li>
         </ul>
-    </article>
-
+</article>
+<br><br><br>
 <footer> 
     <p>
     <a href="https://www.facebook.com"><img src="fb.png" height="40px" width="40px"></a>
