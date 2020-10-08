@@ -2,7 +2,7 @@
 <head>
 <style>
     body{
-        background-image: url(https://i.pinimg.com/originals/be/81/70/be8170262af5201b81ef3990911d84ff.jpg);
+        background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/1400/bc86ac75296439.5c48aa8646a3d.png);
         background-size: cover;
         margin: 0px;
         padding: 0px;
@@ -16,23 +16,36 @@
         min-height: 8vh;
         background-color: rgba(0, 0, 0, 0.123);
     }
-
-    .nul{
+    .h1{
+        display: flex;
+    }
+    .edm{
         color: white;
         text-transform: uppercase;
         letter-spacing: 5px;
+        font-size: 30px;
+        padding: 5px;
+        font-weight: bold;
+    }
+    .nul{
+        font-weight: bold;
+        color: white;
+        letter-spacing: 5px;
         font-size: 20px;
+        padding: 5px;
+        padding-top: 23px;
     }
     .barre{
         display: flex;
         justify-content: space-around;
-        padding-inline-end: 40px;
         border-color: white;
         list-style-type: none;
     }
     .barre li{
         padding: 5px;
         margin: 5px;
+        
+        text-transform: uppercase;
     }
     .barre a{
         color: white;
@@ -89,20 +102,68 @@
             transform: translateX(0px)
         }
     }
+
+    footer{
+        color: white;
+        background-color: rgba(0, 0, 0, 0.493);
+        
+        text-align: center;
+        padding: 5px;
+        bottom: 0px;
+        left: 10px;
+        right: 10px;
+    }
+    #resumenu a{
+        color: white;
+        text-decoration: none;
+        letter-spacing: 3px;
+        font-weight: bold;
+        font-size: 16px;
+
+    }
+    #resumenu ul{
+        padding: 0px 0px 0px 0px;
+    }
+    #resumenu li{
+        list-style-type: none;
+        justify-content: right;
+        padding-bottom: 30px;
+    }
+    #resumenu{
+        justify-content: space-around;
+        display: flex;
+    }
+    #signe{
+        justify-content: center;
+        height: 100px;
+        filter : invert(1);
+    }
+    article{
+        background-color: rgba(255, 255, 255, 0.76);
+        width: 50%;
+        align-content: center;
+        margin: auto;
+        text-align: justify;
+        padding: 10px;
+    }
+    #book1{
+        text-align: center;
+    }
+        
 </style>
 <title>EDM site</title>
 </head>
 <body>
 <header>
     <nav>
-        <div class="nul">
-            <h1>EDM</h1>
+        <div class="h1">
+            <p class="nul">the </p><p class="edm">EDM</p> <p class="nul">website</p>
         </div>
         
         <ul class="barre">
             <li><a href="man.html">Accueil</a></li>
             <li><a href="auteur.html">L'auteur</a></li>
-            <li><a href="Oeuvres.html">Oeuvres </a></li>
+            <li><a href="Oeuvres.html">Œuvres </a></li>
             <li><a href="Projets.html">Projets</a></li>
             <li><a href="Blog.html">Blog</a></li>
             <li><a href="News.html">News</a></li>
@@ -115,6 +176,34 @@
         </div>
     </nav>
 </header>
+
+<article>
+    <br><br>
+    <div id="book1"><img src="covid.jpeg" height="500px"></div>
+    <p>“Pater noster, qui es in caelis sanctificetur nomen tuum adveniat regnum tuum fiat voluntas tua sicut in caelo et in terra. 
+        Panem nostrum quotidianum da nobis hodie et dimitte nobis debita nostra sicut et nos dimittimus debitoribus nostris et ne nos inducas in tentationem sed libera nos a malo. Amen.”</p>
+</article>
+
+<footer> 
+    <p>
+    <a href="https://www.facebook.com"><img src="fb.png" height="40px" width="40px"></a>
+    <a href="https://www.instagram.com"><img src="insta.png"height="40px" width="40px"></a>
+    </p>
+    <div id="resumenu">
+        <ul>
+            <li><a href="auteur.html">L'auteur</a></li>
+            <li><a href="Oeuvres.html">Oeuvres </a></li>
+            <li><a href="Projets.html">Projets</a></li>
+        </ul>
+        <br><br>
+        <ul>
+            <li><a href="Blog.html">Blog</a></li>
+            <li><a href="News.html">News</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+    <img id="signe" src="signature.png">
+</footer>
 
 <script>
     const navSlide = () =>{
