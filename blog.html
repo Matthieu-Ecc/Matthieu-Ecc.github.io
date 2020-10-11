@@ -4,7 +4,7 @@
     body{
         background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/1400/bc86ac75296439.5c48aa8646a3d.png);
         background-size: cover;
-        background-attachment: local;
+        background-attachment: fixed;
         margin: 0px;
         padding: 0px;
         font-family: 'Courier New', Courier, monospace;
@@ -16,18 +16,32 @@
         align-items: center;
         min-height: 8vh;
         background-color: rgba(0, 0, 0, 0.123);
+        
+        top: 0;
+        
+        z-index: 3;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+    }
+    nav:hover {
+        background-color: rgba(0, 0, 0, 0.473);
+
     }
     .h1{
         display: flex;
     }
-    .edm{
+    .h1 a{
+        color: white;
+        text-decoration: none;
+    }
+    #edm{
         color: white;
         text-transform: uppercase;
         letter-spacing: 5px;
         font-size: 30px;
         padding: 5px;
     }
-    .tit{
+    #tit{
         
         color: white;
         letter-spacing: 5px;
@@ -64,16 +78,16 @@
         margin: 5px;
     }
 
-    @media screen and (max-width:768px){
+    @media screen and (max-width:900px){
         body{
             overflow-x: hidden;
         }
         .barre{
             position: absolute;
-            top:-100%;
+            top:-105%;
             height: 92vh;
-            
-            background-color: #00000060;
+            z-index: 4;
+            background-color: #000000e1;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -105,7 +119,7 @@
     footer{
         color: white;
         background-color: rgba(0, 0, 0, 0.493);
-        
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         text-align: center;
         padding: 5px;
         bottom: 0px;
@@ -136,6 +150,8 @@
         height: 100px;
         filter : invert(1);
     }
+
+    
         
 </style>
 <title>EDM site</title>
@@ -144,11 +160,10 @@
 <header>
     <nav>
         <div class="h1">
-            <p class="tit">the </p><p class="edm">EDM</p> <p class="tit">website</p>
+            <p id="tit"><a href="man.html">the </p><p id="edm">EDM</p> <p id="tit">website</a></p>
         </div>
         
         <ul class="barre">
-            <li><a href="man.html">Accueil</a></li>
             <li><a href="auteur.html">L'auteur</a></li>
             <li><a href="Oeuvres.html">Œuvres </a></li>
             <li><a href="Projets.html">Projets</a></li>
@@ -163,7 +178,6 @@
         </div>
     </nav>
 </header>
-
 
 
 <footer> 
