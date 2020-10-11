@@ -100,12 +100,7 @@
         }
         .menu{
             display:block;
-        }
-        #photo{
-            float: none;
-            text-align: center;
-        }
-        
+        }        
     }
     .nav-active{
         transform: translateY(125%);
@@ -169,14 +164,13 @@
     }
     #photo{
         float: left;
-        box-shadow: 0px 5px 20px 0 rgba(49, 46, 42, 0.22);
         margin-right: 15px;
     }
     #part1, #part2, #part3{
         padding-bottom: 30px;
         text-align: justify;
-       
     }
+    
     h5{
         font-size: 30px;
         font-weight: normal;
@@ -187,14 +181,24 @@
         word-spacing: 15px;
         letter-spacing: 9px;
         text-shadow: 2px 2px 3px black;
-        margin-bottom: 30px;
-        margin-top: 30px;
+        margin:60px;
     }
     h4{
         text-align: center;    
         text-transform: uppercase;
     }
 
+    @media screen and (max-width:900px){
+        body{
+            overflow-x: hidden;
+        }
+        #photo{
+            text-align: center;
+            margin: auto;
+            float: none;
+        }
+        
+    }
 </style>
 <title>EDM site</title>
 </head>
@@ -223,7 +227,7 @@
 <h5>― EDM ―</h5>
 <article>
     <div id="tout">
-        <div id="photo"><img src="https://www.slate.fr/sites/default/files/styles/1200x680/public/stupeflip-photo4.jpg" width="400px";></div>
+        <div id="photo"><img src="pp.jpeg" width="300px" box-shadow="0px 5px 20px 0 rgba(49, 46, 42, 0.22)"></div>
         <div id="part1">
             <h4>titre</h4>
             “2222Pater noster, qui es in caelis sanctificetur nomen tuum adveniat regnum tuum inducas in tentationem sed libera nos a malo. Amen.”
@@ -236,12 +240,12 @@
         </div>
         <div id="part3">
             <h4>titre</h4>
-            “2222Pater noster, qui es in caelis sanctificetur nomen tuum adveniat regnum tuum inducas in tentationem sed libera nos a malo. Amen.”
+            “2222Pater noster, qui es in caelis sanctificetur nomen tuum adveniat regnum tuum inducas in tentationem sed 222Pater noster, qui es in caelis sanctificetur nomen tuum adveniat regnum tuum inducas in tentationem sed222Pater noster, qui es in caelis sanctificetur nomen tuum adveniat regnum tuum inducas in tentationem sedlibera nos a malo. Amen.”
                 
         </div>
     </div>
 </article>
-
+<br><br><br>
 <footer> 
     <p>
     <a href="https://www.facebook.com"><img src="fb.png" height="40px" width="40px"></a>
