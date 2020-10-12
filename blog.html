@@ -9,9 +9,7 @@
         padding: 0px;
         font-family: 'Courier New', Courier, monospace;
     }
-    ul{
-        padding-inline-start: 0px;
-    }
+
     nav{
         display: flex;
         justify-content: space-around;
@@ -152,8 +150,67 @@
         height: 100px;
         filter : invert(1);
     }
+    h2, h3, h4{
+        text-transform: uppercase;
+        font-size: 18px;
+        font-weight: normal;
+    }
+    #news1{
+        margin-left: 60%;
+        margin-top: 100px;
+        position: relative;
+        text-align: justify;
+        width: 350px;
+        line-height: 40px;
+        margin-bottom: 100px;
+        color: rgb(2, 2, 122);
+    }
+    #inside1{
+        position: absolute;
+        top: 8%;
+        left: 20%;
 
-    
+    }
+    #news2{
+        margin-left: 180px;
+        position: relative;
+        text-align: justify;
+        width: 400px;
+        line-height: 50px;
+        color: #f2f2f2;
+        margin-bottom: 100px;
+    }
+    #inside2{
+        position: absolute;
+        top: 10%;
+        left: 15%;
+    }
+    #news3{
+        position: relative;
+        text-align: center;
+        width: 200px;
+        margin: auto;
+        color: #f2f2f2;
+        font-size: 200px;
+    }
+    #inside3{
+        position: absolute;
+        top: -48%;
+        left: 20%;    
+        padding: 0px;    
+    }
+    @media screen and (max-width:900px){
+        body{
+            overflow-x: hidden;
+        }
+        #news1, #news2, #news3{
+            margin: auto;
+            margin-top: 100px;
+        }
+    }
+    ul{
+        padding-inline-start: 0px;
+    }
         
 </style>
 <title>EDM site</title>
@@ -183,7 +240,33 @@
     </nav>
 </header>
 
-
+<div class="corps">
+    <div id="news1">
+        <img src="paper1.png" width="430px">
+        <div id="inside1"> 
+            <h2>Entrée dans le monde de la littérature</h2>
+            <p font size='14px' >“1111Pater noster, qui es in caelis sanctificetur nomen tuum adveniat regnum tuum fiat voluntas tua sicut in caelo et in terra. 
+                Panem era nos a malo. Amen.”
+            </p>
+        </div>
+    </div>
+    <div id="news2">
+        <img src="tab.png" width="500px" height="400px">
+        <div id="inside2">
+            <h3>AN 3 APRES COVID</h3>
+            <p>“2222Pater noster, qui es in caelis sanctificetur nomen tuum adveniat regnum tuum inducas in tentationem sed libera nos a malo. Amen.”
+            </p>
+        </div>
+    </div>
+    <br><br><br>
+    <div id="news3">
+        <img src="tab2.png" width="200">
+        <div id="inside3">
+            <p> Φ </p>
+        </div>
+    </div>
+</div>
+<br><br><br><br>
 <footer> 
     <p>
     <a href="https://www.facebook.com"><img src="fb.png" height="40px" width="40px"></a>
