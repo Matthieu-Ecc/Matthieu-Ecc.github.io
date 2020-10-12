@@ -154,7 +154,7 @@
     }
 
     article{
-        background-color: rgba(255, 255, 255, 0.911);
+        background-color: rgba(255, 255, 255, 0.726);
         width: 70%;
         align-content: center;
         margin: auto;
@@ -167,12 +167,16 @@
         letter-spacing: 1px;
     }
     #photo{
-        float: left;
-        margin-right: 15px;
+            text-align: center;
+            margin: 30px;
+            filter: drop-shadow(10px 10px 3px rgba(0, 0, 0, 0.582));
     }
-    #part1, #part2, #part3{
-        padding-bottom: 30px;
+    #part1, #part2{
+        padding-top: 5px;
         text-align: justify;
+        text-indent: 30px;
+        
+        line-height: 150%;
     }
     
     h5{
@@ -187,20 +191,13 @@
         text-shadow: 2px 2px 3px black;
         margin:60px;
     }
-    h4{
-        text-align: center;    
-        text-transform: uppercase;
-    }
+    
 
     @media screen and (max-width:900px){
         body{
             overflow-x: hidden;
         }
-        #photo{
-            text-align: center;
-            margin: auto;
-            float: none;
-        }
+        
         article{
             width: 100%;
             padding-left: 0px;
@@ -209,6 +206,8 @@
         #part1, #part2, #part3{
             margin-left: 10px;
             margin-right: 10px;
+            padding-left: 50px;
+            padding-right: 50px;
         }        
     }
 
@@ -244,20 +243,19 @@
     <div id="tout">
         <div id="photo"><img src="pp.jpeg" width="300px" box-shadow="0px 5px 20px 0 rgba(49, 46, 42, 0.22)"></div>
         <div id="part1">
-            <h4>titre</h4>
-            “2222Pater noster, qui es in caelis sanctificetur nomen tuum adveniat regnum tuum inducas in tentationem sed libera nos a malo. Amen.”
-                
+            <p>Né en 1968, j’ai une formation scientifique et un diplôme d’ingénieur. Mon service militaire
+            m’amènera pour deux ans en Guyane. Un tournant dans ma jeune existence puisque trente ans après
+            j’habite toujours de l’autre coté de l’atlantique où j’enseignais encore récemment les mathématiques
+            en lycée. </p>  
         </div>
         <div id="part2">
-            <h4>titre</h4>
-            “2222Pater noster, qui es in caelis sanctificetur nomen tuum adveniat regnum tuum inducas in tentationem sed libera nos a malo. Amen.”
-                
+            <p>Curieux de tout, je n’ai jamais aimé la routine et ai toujours multiplié les défis
+            professionnels. Après avoir monté il y a quelques années une société de BTP, je possède maintenant
+            une structure de promoteur immobilier qui me dégage suffisamment de temps pour me lancer un
+            nouveau challenge : affronter une page blanche, une vieille tentation que j’ai enfin décidé de
+            regarder droit dans les yeux.</p>
         </div>
-        <div id="part3">
-            <h4>titre</h4>
-            “2222Pater noster, qui es in caelis sanctificetur nomen tuum adveniat regnum tuum inducas in tentationem sed 222Pater noster, qui es in caelis sanctificetur nomen tuum adveniat regnum tuum inducas in tentationem sed222Pater noster, qui es in caelis sanctificetur nomen tuum adveniat regnum tuum inducas in tentationem sedlibera nos a malo. Amen.”
-                
-        </div>
+        
     </div>
 </article>
 <br><br><br>
