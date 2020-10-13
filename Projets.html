@@ -164,7 +164,7 @@
         text-shadow: 2px 2px 3px black;
         margin: 60px;
     }
-    article{
+    #boom{
         width: 80%;
         padding: 30px;
         display: flex;
@@ -178,11 +178,11 @@
         margin: auto;
         text-align: justify;
     }
-    article img{
+    #boom img, #phi img{
         margin-right: 30px;
     }
     @media screen and (max-width:900px){
-        article{
+        #boom, #phi{
             text-align: center;
             width: 100%;
             padding-left: 0px;
@@ -190,7 +190,7 @@
             flex-direction: column;
             margin: auto;
         }
-        article p{
+        #boom p, #phi p{
             margin-left: 10px;
             margin-right: 10px;
         }
@@ -200,7 +200,7 @@
             font-size: 23px;
             text-align: center;
         }
-        article img{
+        #boom img, #phi img{
         margin-right: 0px;
         }
     }
@@ -218,11 +218,28 @@
         font-weight: normal;
         letter-spacing: 3px;
     }
-
+    #phi{
+        width: 80%;
+        padding: 30px;
+        display: block;
+        background-color: rgba(255, 255, 255, 0.726);
+        font-size: 14px;
+        margin: auto;
+        margin-top: 0px;
+    }
+    #monphi{
+        display: flex;
+    }
+    
+    #extrait{
+        width: 100%;
+        padding-top: 20px;
+    }
 </style>
 <title>EDM site</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel="shortcut icon" href="em.ico" />
 </head>
 <body>
 <header>
@@ -248,7 +265,7 @@
 </header>
 <h5>― En projet ―</h5>
 <h4>Sortie pour 2021</h4>
-<article>
+<article id="boom">
 
     <div id="book1"><img src="covid.jpeg" height="300px"></div>
         <div id="dos">
@@ -259,18 +276,23 @@
 </article>
 <br><br>
 <article  id="phi">
-
+<div id="monphi">
     <div id="book1"><img src="phi.png" height="300px"></div>
         <div id="dos">
             <h3>Φ (Phi)</h3>
-            <p>“Pater noster, qui es in caelis sanctificetur nomen tuum adveniat regnum tuum fiat voluntas tua sicut in caelo et in terra. 
-            Panem nostrum quotidianum da nobis hodie et dimitte nobis debita nostra sicut et nos dimittimus debitoribus nostris et ne nos inducas in tentationem sed libera nos a malo. Amen.”</p>
+            <p>RESUME <br>
+                Une série de meurtres, accomplie par la secte des gardiens du Ф, au nom de Dieu, dont ils souhaitent ramener le regard sur terre. Pour le compte du FBI, Franck Wallace et Dan Moreau, sont chargés de résoudre cette enquête, mêlant mathématique et mysticisme. 
+                Mais le passé personnel des deux hommes les rattrape, victimes d’un traumatisme, qu’ils n’ont jamais pu oublier. Cette affaire pourrait cependant être le départ d’une nouvelle vie, révélant que la vérité n’est pas toujours là où on l’attend.
+            </p>
         </div>
+</div>
+        <embed id='extrait' src=extraitphi.pdf height=500 type='application/pdf'/>
+
 </article>
 <br><br><br><br>
 <h4>Sortie pour 2022</h4>
 
-<article>
+<article id="boom">
     <div id="book1"><img src="covid.jpeg" height="300px"></div>
         <div id="dos">
             <h3>AN 3 APRÈS COVID 21 - Tome 3 : Marianne</h3>
@@ -279,7 +301,7 @@
         </div>
 </article>
 <br><br>
-<article>
+<article id="boom">
 
     <div id="book1"><img src="phi.png" height="300px"></div>
         <div id="dos">
