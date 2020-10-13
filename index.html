@@ -171,7 +171,32 @@
         color: white;
         text-align: justify;
     }
-
+    #dos{
+        display: flex;
+        margin: auto;
+    }
+    #dos img{
+        margin: auto;
+    }
+    #dos a{
+        border-radius: 30px;
+        background-color: rgba(255, 255, 255, 0);
+        box-shadow: 0 0 2px rgba(255, 255, 255, 0.753);
+        padding-left: 15px;
+        padding-right: 15px;
+        
+        text-decoration: none;
+        font-weight: bold;
+        color: rgb(255, 255, 255);
+        margin-top: 5px;
+    }
+    #dos a:hover{
+        cursor: pointer;
+        color: rgb(0, 0, 0);
+        background-color: rgba(255, 255, 255, 0.87);
+        box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.568);
+    }
+    
     #news2{
         margin-top: 30px;
         padding: 10px;
@@ -208,6 +233,7 @@
         cursor: pointer;
 
     }
+    
     @media screen and (max-width:900px){
 
         #news1, #news2, #news3{
@@ -215,7 +241,9 @@
             margin-top: 100px;
             
         }
-
+        #dos{
+            flex-direction: column;
+        }
         #news2{
             
             margin-left: 0;
@@ -227,6 +255,7 @@
             
             margin-left: 0;
         }
+        
     }
     #reseau:hover{
         cursor: pointer;
@@ -266,10 +295,17 @@
 
 <div class="corps">
     <div id="news1">
-            <h2>Entrée dans le monde de la littérature</h2>
-            <p font size='14px' >“1111Pater noster, qui es in caelis sanctificetur nomen tuum adveniat regnum tuum fiat voluntas tua sicut in caelo et in terra. 
-                Panem era nos a malo. Amen.”
+            <h2>AN 3 APRÈS COVID 21</h2>
+            <div id="dos">
+            <img src="covid.jpg" height="300px">
+            <p font size='14px'>Fin de l’été 2024 : Trois ans auparavant surgissait le Multiface, une terrible mutation du Covid poussant les nations aux portes du chaos. Désormais, tout le monde porte son Covtrack, un petit galet noir enregistrant en continu les interactions sociales de chacun tandis que la police du COVID veille au bon ordre. Cela n’empêche pas quatre étudiants partageant le même appartement de vivre leur jeunesse avec insouciance et passion, jusqu’à ce que le covtrack de l’un d’eux change de couleur…
+
+                <br><br>‘An 3 Après covid 21’ est une trilogie décrivant une vision dystopique de notre monde et dont <strong>‘Le Multiface’</strong> constitue le premier tome. 
+                <br><br>
+                Pour en savoir plus, rendez-vous dans les <a href="Projets.html">projets</a> !
             </p>
+            
+            </div>
     </div>
     <br><br>
     <div id="news2">

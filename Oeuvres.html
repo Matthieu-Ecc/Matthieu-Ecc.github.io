@@ -155,7 +155,7 @@
         margin: auto;
         text-align: justify;
         padding: 10px;
-        font-size: 14px;
+        font-size: 17px;
         padding-left: 50px;
         padding-right: 50px;
     }
@@ -192,12 +192,12 @@
         border-radius: 30px;
         background-color: rgba(255, 255, 255, 0);
         box-shadow: 0 0 2px rgba(31, 31, 31, 0.753);
-        padding-left: 4px;
-        padding-right: 4px;
-        padding: 7px;
+        padding-left: 15px;
+        padding-right: 15px;
         text-decoration: none;
         color: black;
         margin-top: 5px;
+        transition: 0.3s;
     }
     #projet{
         font-size: 18px;
@@ -205,13 +205,15 @@
     }
     #projet a:hover{
         cursor: pointer;
+        transition: 0.3s;
+            color: white;
         background-color: rgba(0, 0, 0, 0.507);
         box-shadow: inset 0 0 10px rgba(31, 31, 31, 0.753);
     }
     
     
 .insider {
-    z-index: 2;
+
     cursor: pointer;
   margin-top: 20px;
   height: 500px;
@@ -248,15 +250,16 @@
 }
 #genese{
     height: 200px;
-    overflow: hidden;
     border: solid;
     border-color: rgba(0, 0, 0, 0.377);
-    columns: 2;
-    column-gap: 20px;
-    padding: 10px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 15px;
     opacity: 0.7;
     word-spacing: -.4ch;
     font-size: 17px;
+    
 }
 #genese:hover{
     opacity: 1;
@@ -264,24 +267,32 @@
     background-color:  rgba(255, 255, 255, 0.726);
 }
 #genese2{
-    display: none;
-    height: auto;
+    visibility: hidden;
+    height: 0px;
     border: solid;
     border-color: rgba(0, 0, 0, 0.377);
     background-color:  rgba(255, 255, 255, 0.726);
-    columns: 2;
-    column-gap: 20px;
-    padding: 10px;
-    opacity: 0.7;
+    
+    padding: 15px;
+    
     word-spacing: -.4ch;
     font-size: 17px;
-
+    margin-block-start: 0px;
 }
 h4{
     text-transform: uppercase;
     font-weight: normal;
     font-size: 18px;
     
+}
+#phi{
+    border: solid;
+    word-spacing: -.4ch;
+    font-size: 17px;
+    border-color: rgba(0, 0, 0, 0.377);
+    background-color:  rgba(255, 255, 255, 0.726);
+    padding: 15px;
+    margin-block-start: 0px;
 }
 #stp{
     background-color:  rgba(255, 255, 255, 0.726);
@@ -292,18 +303,128 @@ h4{
     position: absolute;
     height: 340px;
 }
+.venir{
+    margin: 20px;
+    text-align: center;
+    font-weight: 20px;
+}
 @media screen and (max-width:900px){
         article, #stp{
             width: 100%;
             padding-left: 0px;
             padding-right: 0px;
+            
         }
         article p{
             margin-left: 10px;
             margin-right: 10px;
             line-height: 10px;
         }
+        #genese2{
+            line-height: normal;
+        }
+        h5{
+            font-size: 20px;
+        }
+        #phi{
+            line-height: normal;
+        }
+        
     }
+
+
+     #h31, #h32{
+         font-weight: normal;
+            width: 50%;
+            cursor: pointer;
+            transition: 0.3s;
+            margin: auto;
+            border-radius: 30px;
+            background-color: rgba(255, 255, 255, 0);
+            box-shadow: 0 0 2px rgba(31, 31, 31, 0.753);
+            padding-left: 15px;
+            padding-right: 15px;
+            text-decoration: none;
+            color: black;
+            margin-top: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        #h31:hover, #h32:hover{
+            cursor: pointer;
+            transition: 0.3s;
+            color: white;
+        background-color: rgba(0, 0, 0, 0.507);
+        box-shadow: inset 0 0 10px rgba(31, 31, 31, 0.753);
+        
+        }
+
+        .modal {
+        display: none;
+        position: fixed; 
+        z-index: 1; 
+        padding-top: 50px; 
+        left: 0;
+        top: 0;
+        width: 100%; 
+        height: 100%; 
+        overflow: auto; 
+ 
+        background-color: rgba(0, 0, 0, 0.473);
+        margin-bottom: 500px;
+        }
+
+        .modal-content {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 500px;
+        padding: 20px;
+        }
+
+        
+        #caption, #caption2{
+        margin: auto;
+        display: block;
+        width: 100%;
+        text-align: justify;
+        color: #ccc;
+        font-size: large;
+        background-color: rgba(0, 0, 0, 0.575);
+        z-index: 5;
+        }
+
+        
+        .modal-content, #caption, #caption2{
+        animation-name: zoom;
+        animation-duration: 0.6s;
+        }
+
+        @keyframes zoom {
+            from {
+                transform:scale(0)
+            }
+            to {
+                transform:scale(1)
+            }
+        }
+
+        
+        .close, .close2{
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: whitesmoke;
+            font-size: 30px;
+            transition: 0.3s;
+        }
+
+        .close:hover, .close2:hover, .close:focus, .close2:focus{
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
 
 </style>
 <title>EDM site</title>
@@ -336,7 +457,7 @@ h4{
     <h5>― Les Œuvres ―</h5>
 </header>
 
-<div id="stp"> </div>
+
     <div class="insider">
         <div class="card">
           <div class="side"><img src="covid.jpg" height="500px"></div>
@@ -347,7 +468,7 @@ h4{
 <article>
     
     <h1 class="redtitle1">AN 3 APRÈS COVID 21 </h1><h2 class="redtitle2">Tome 1 - Le Multiface</h2>
-    <h4>La genèse</h4>
+    <h4>― La genèse ―</h4>
 
      <p id="genese" onclick="afficher()">   Je réside en Guyane Française dans une solide villa juchée sur un terrain en pente, avec une vaste terrasse coincée entre le bleu d’une piscine et le vert d’un jardin chargé de fruits. La rue qui passe devant ma maison s’achève plus loin sur une longue plage avec derrière l’immense océan atlantique que l’on entend parfois gronder.
         
@@ -366,33 +487,59 @@ h4{
        
     <p id="genese2" onclick="cacher()">   Je réside en Guyane Française dans une solide villa juchée sur un terrain en pente, avec une vaste terrasse coincée entre le bleu d’une piscine et le vert d’un jardin chargé de fruits. La rue qui passe devant ma maison s’achève plus loin sur une longue plage avec derrière l’immense océan atlantique que l’on entend parfois gronder.
         
-            Autant dire que, lorsque la crise sanitaire s’est abattue en mars de cette année,  le confinement ne fut pas une expérience très pénible à vivre. Une citation dit qu’en toute difficulté, il faut voir une opportunité. Et c’est exactement ce que j’ai ressenti : L’opportunité de me poser et de renaitre différemment.
+        <br><br>Autant dire que, lorsque la crise sanitaire s’est abattue en mars de cette année,  le confinement ne fut pas une expérience très pénible à vivre. Une citation dit qu’en toute difficulté, il faut voir une opportunité. Et c’est exactement ce que j’ai ressenti : L’opportunité de me poser et de renaitre différemment.
             
-            J’avais entamé une lente mue quelques mois auparavant lorsque l’on m’avait diagnostiqué un lymphome. On m’avait évacué dans le service d’hématologie d’un hôpital parisien pour entamer une thérapie qui s’annonçait lourde. Les longues journées coincées sur un lit médicalisé avec la perspective d’une vie raccourcie incitent à l’introspection.
+        <br><br>J’avais entamé une lente mue quelques mois auparavant lorsque l’on m’avait diagnostiqué un lymphome. On m’avait évacué dans le service d’hématologie d’un hôpital parisien pour entamer une thérapie qui s’annonçait lourde. Les longues journées coincées sur un lit médicalisé avec la perspective d’une vie raccourcie incitent à l’introspection.
             
-            Une dizaine d’années auparavant, je m’étais essayé  à l’écriture de scénarios. Je n’étais pas mauvais. J’avais gagné un concours avec mon premier script et au troisième, on m’avait proposé d’intégrer un pool de scénaristes. Mais il fallait pour cela que je vienne travailler à Paris. J’avais poliment décliné. D’interminables journées s’ouvraient devait moi. J’ai ressorti mon premier manuscrit et j’ai commencé à le transformer en roman.
+        <br><br>Une dizaine d’années auparavant, je m’étais essayé  à l’écriture de scénarios. Je n’étais pas mauvais. J’avais gagné un concours avec mon premier script et au troisième, on m’avait proposé d’intégrer un pool de scénaristes. Mais il fallait pour cela que je vienne travailler à Paris. J’avais poliment décliné. D’interminables journées s’ouvraient devait moi. J’ai ressorti mon premier manuscrit et j’ai commencé à le transformer en roman.
             
-            Finalement, après plusieurs examens et l’attente insupportable d’un traitement sans cesse décalé, j’appris que mon lymphome n’avait jamais existé. J’avais une banale tumeur qu’une boite d’anti biotique allait très vite éliminer, une simple erreur de diagnostic dont on apprécierait que je ne m’en formalise pas plus que ça. Comme quoi, on n’est jamais à l’abri d’une bonne nouvelle.
+        <br><br>Finalement, après plusieurs examens et l’attente insupportable d’un traitement sans cesse décalé, j’appris que mon lymphome n’avait jamais existé. J’avais une banale tumeur qu’une boite d’anti biotique allait très vite éliminer, une simple erreur de diagnostic dont on apprécierait que je ne m’en formalise pas plus que ça. Comme quoi, on n’est jamais à l’abri d’une bonne nouvelle.
             
-            Je rentrai en Guyane juste à temps pour fêter mon anniversaire, le 8 mars. Une semaine après, le pays était confiné. C’est à ce moment que ma mue s’est accélérée. J’ai très vite eu l’impression d’être au cœur d’un événement rare, comme il n’en survient que très peu par siècle. La réécriture de mon ancien scénario allait attendre. Je vivais en direct un moment unique qu’il me fallait saisir immédiatement.
+        <br><br>Je rentrai en Guyane juste à temps pour fêter mon anniversaire, le 8 mars. Une semaine après, le pays était confiné. C’est à ce moment que ma mue s’est accélérée. J’ai très vite eu l’impression d’être au cœur d’un événement rare, comme il n’en survient que très peu par siècle. La réécriture de mon ancien scénario allait attendre. Je vivais en direct un moment unique qu’il me fallait saisir immédiatement.
             
-            J’ai toujours eu une imagination fertile. Il me suffisait d’être une éponge et d’absorber ce que je lisais, ce que j’entendais, ce que je voyais, ce que je ressentais. J’ai pris mon stylo et un paquet de feuilles blanches. Mon subconscient a fait le reste. C’est comme cela qu’est né ‘An 3 après Covid 21’.
+        <br><br>J’ai toujours eu une imagination fertile. Il me suffisait d’être une éponge et d’absorber ce que je lisais, ce que j’entendais, ce que je voyais, ce que je ressentais. J’ai pris mon stylo et un paquet de feuilles blanches. Mon subconscient a fait le reste. C’est comme cela qu’est né ‘An 3 après Covid 21’.
             </p>
-        <ul>
-            <li><a href="https://www.amazon.fr/">Amazon</a></li>
-            <li><a href="https://www.fnac.com/">Fnac </a></li>
-            <li><a href="https://www.cultura.com/livre.html">Cultura</a></li>
-        </ul>
+        
+        
+    <h4>― EXTRAITS ―</h4>
+        <p></p>
+        <tr>
+            <td id="tdleft"> 
+                <h3 id="h31" class="lieu">Premier extrait</h3>                                        
+                    <div id="myModal" class="modal">
+                        <span class="close">&times;</span>
+                        
+                        <div id="caption"> <embed id='extrait' z-index='5' height="100%" width="100%" src=extrait2.pdf type='application/pdf'/> </div>
+                    
+                    </div>
+
+            </td>
+           
+        </tr>
+        <tr>
+            <td id="tdleft"> 
+                <h3 id="h32" class="lieu">Second extrait</h3>
+                <div id="myModal2" class="modal">
+                    <span class="close2">&times;</span>
+                    
+                    <div id="caption2"> <embed id='extrait' z-index='5' width="100%" height="100%" src=extrait1.pdf type='application/pdf'/> </div>
+                
+                </div>
+            </td>
+           
+        </tr>
+
 </article>
+<br><br><br><br>
+<br><br>
+<div id="book1"><img src="phi.png" height="500px"></div>
 <br><br>
 <article>
-    <br>
-    <div id="book1"><img src="phi.png" height="500px"></div>
-    <br>
-    <h1 class="redtitle1"> Φ (Phi) </h1><h2 class="redtitle2">A venir</h2>
-    <p id="projet">Plus d'informations dans les <a href="Projets.html#phi">projets</a></p>
-    <p>“Pater noster, qui es in caelis sanctificetur nomen tuum adveniat regnum tuum fiat voluntas tua sicut in caelo et in terra. 
-        Panem nostrum quotidianum da nobis hodie et dimitte nobis debita nostra sicut et nos dimittimus debitoribus nostris et ne nos inducas in tentationem sed libera nos a malo. Amen.”</p>
+
+    <h1 class="redtitle1"> Φ (Phi) </h1><p class="venir">A venir...</p>
+    
+    <p id="phi">Une série de meurtres, accomplie par la secte des gardiens du Ф, au nom de Dieu, dont ils souhaitent ramener le regard sur terre. Pour le compte du FBI, Franck Wallace et Dan Moreau, sont chargés de résoudre cette enquête, mêlant mathématique et mysticisme. Mais le passé personnel des deux hommes les rattrape, victimes d’un traumatisme, qu’ils n’ont jamais pu oublier. Cette affaire pourrait cependant être le départ d’une nouvelle vie, révélant que la vérité n’est pas toujours là où on l’attend.</p>
+    <p id="projet">Pour en savoir plus, rendez-vous dans les <a href="Projets.html#phi">projets</a></p>
 </article>
 <br><br><br>
 <footer> 
@@ -438,16 +585,63 @@ h4{
     }
     navSlide();
 
-    document.querySelector("#genese2").style.display = "block";
-
     function afficher(){
+        document.querySelector("#genese").style.visibility = "hidden";
+        document.querySelector("#genese2").style.visibility = "visible";
         document.querySelector("#genese").style.display = "none";
-    	document.querySelector("#genese2").style.display = "block";
+        
+        if(document.querySelector("#genese").style.visibility = "hidden"){
+            document.querySelector("#genese").style.height = '0';
+            document.querySelector("#genese").style.margin = '0';
+            document.querySelector("#genese2").style.height = 'auto';
+        }
+        
+        
     }
     function cacher(){
-        document.querySelector("#genese2").style.display = "none";
-    	document.querySelector("#genese").style.display = "block";
+        document.querySelector("#genese2").style.visibility = "hidden";
+        document.querySelector("#genese").style.visibility = "visible";
+        document.querySelector("#genese").style.display = "block";
+
+        if(document.querySelector("#genese2").style.visibility = "hidden"){
+            document.querySelector("#genese2").style.height = '0';
+            document.querySelector("#genese").style.height = '200px';
+
+        }
+        
     }
+
+
+    var modal = document.getElementById("myModal");
+
+var img = document.getElementById("h31");
+
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+}
+
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+
+
+var modal2 = document.getElementById("myModal2");
+
+var img2 = document.getElementById("h32");
+img2.onclick = function(){
+    modal2.style.display = "block";
+    modalImg2.src = this.src;
+}
+
+var span2 = document.getElementsByClassName("close2")[0];
+
+span2.onclick = function() {
+    modal2.style.display = "none";
+}
 </script>
 </body>
 </html>
