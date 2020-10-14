@@ -181,29 +181,7 @@
     #boom img, #phi img{
         margin-right: 30px;
     }
-    @media screen and (max-width:900px){
-        #boom, #phi{
-            text-align: center;
-            width: 100%;
-            padding-left: 0px;
-            padding-right: 0px;
-            flex-direction: column;
-            margin: auto;
-        }
-        #boom p, #phi p{
-            margin-left: 10px;
-            margin-right: 10px;
-        }
-        h3{
-            
-            font-weight: normal;
-            font-size: 23px;
-            text-align: center;
-        }
-        #boom img, #phi img{
-        margin-right: 0px;
-        }
-    }
+    
     h4{
         text-align: center;
         width: 80%;
@@ -221,7 +199,7 @@
     #phi{
         width: 80%;
         padding: 30px;
-        display: block;
+        
         background-color: rgba(255, 255, 255, 0.726);
         font-size: 14px;
         margin: auto;
@@ -248,6 +226,33 @@
     background-color:  rgba(255, 255, 255, 0.726);
     padding: 15px;
     margin-block-start: 0px;
+    }
+    @media screen and (max-width:900px){
+        #boom, #monphi, #phi{
+            
+            text-align: center;
+            width: 100%;
+            padding-left: 0px;
+            padding-right: 0px;
+            flex-direction: column;
+            margin: auto;
+        }
+        #monphi{
+            display: block;
+        }
+        #boom p, #phi p{
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        h3{
+            
+            font-weight: normal;
+            font-size: 23px;
+            text-align: center;
+        }
+        #boom img, #phi img{
+        margin-right: 0px;
+        }
     }
 </style>
 <title>EDM site</title>

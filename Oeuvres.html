@@ -249,7 +249,7 @@
   transform: rotateY(180deg);
 }
 #genese{
-    height: 200px;
+
     border: solid;
     border-color: rgba(0, 0, 0, 0.377);
     text-overflow: ellipsis;
@@ -259,11 +259,12 @@
     opacity: 0.7;
     word-spacing: -.4ch;
     font-size: 17px;
-    
+    transition: 0.3s;
 }
 #genese:hover{
     opacity: 1;
     cursor: pointer;
+    transition: 0.3s;
     background-color:  rgba(255, 255, 255, 0.726);
 }
 #genese2{
@@ -272,7 +273,7 @@
     border: solid;
     border-color: rgba(0, 0, 0, 0.377);
     background-color:  rgba(255, 255, 255, 0.726);
-    
+    cursor: pointer;
     padding: 15px;
     
     word-spacing: -.4ch;
@@ -316,8 +317,8 @@ h4{
             
         }
         article p{
-            margin-left: 10px;
-            margin-right: 10px;
+            margin-left: 10px!important;
+            margin-right: 10px!important;
             line-height: 10px;
         }
         #genese2{
@@ -502,7 +503,6 @@ h4{
         
         
     <h4>― EXTRAITS ―</h4>
-        <p></p>
         <tr>
             <td id="tdleft"> 
                 <h3 id="h31" class="lieu">Premier extrait</h3>                                        
@@ -605,7 +605,7 @@ h4{
 
         if(document.querySelector("#genese2").style.visibility = "hidden"){
             document.querySelector("#genese2").style.height = '0';
-            document.querySelector("#genese").style.height = '200px';
+            document.querySelector("#genese").style.height = 'auto';
 
         }
         
