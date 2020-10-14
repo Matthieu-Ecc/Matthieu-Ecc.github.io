@@ -213,18 +213,16 @@
     
 
     #card {
-        cursor: pointer;
         margin-top: 20px;
-        height: 500px;
-        
-        margin-left: auto;
-        margin-right: auto;
+        height: 700px;
         margin-bottom: 30px;
+        text-align: center;
     }
+
     #chut{
-        margin: auto;
-        display: block;
+        cursor: pointer;
     }
+
 
 
 #imggen{
@@ -422,6 +420,31 @@ h4{
             cursor: pointer;
         }
 
+
+    #card a {
+    text-decoration: none;
+    }
+    #card a:hover {
+    background: none;
+    }
+    #card a span {
+    display: none;
+    opacity: 0;
+    }
+    #card a:hover span {
+        opacity: 1;
+        float: left;
+        display: inline;
+        position: absolute;
+        margin-top:100px;
+        left: 40%;
+        width: 200px;
+        border:1px solid #363232ea;
+        background: #f2f2f2d7;
+        text-align: center;
+        color: #000000;
+    }
+
 </style>
 <title>EDM site</title>
 <meta charset="utf-8">
@@ -453,8 +476,11 @@ h4{
     <h5>― Les Œuvres ―</h5>
 </header>
 
+
+
           <div id="card">
-            <img id="chut" onclick="couv4()" src="covid.jpg" height="500px">
+            <a href="#"><span  onclick="couv4()">Cliquez pour voir le résumé</span><img id="chut" onclick="couv4()" src="covid.jpg" height="700px"></a>
+
           </div>
 
 <article>
@@ -523,7 +549,7 @@ h4{
 </article>
 <br><br><br><br>
 <br><br>
-<div id="book1"><img src="phi.png" height="500px"></div>
+<div id="book1"><img src="phi.png" height="700px"></div>
 <br><br>
 <article>
 
@@ -581,10 +607,12 @@ h4{
         if (element.src.match("covid"))
         {
         element.src="4couv.jpg";
+        document.querySelector("span").style.display = "none";
         }
         else
         {
         element.src="covid.jpg";
+        document.querySelector("span").style.display = "block";
         }
     }
 
@@ -655,3 +683,5 @@ span2.onclick = function() {
 </script>
 </body>
 </html>
+
+
