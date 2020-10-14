@@ -80,8 +80,13 @@
         background-color: white;
         margin: 5px;
     }
-
+    @media screen{
+        body{
+            background-image: url(fond.png);
+        }
+    }
     @media screen and (max-width:900px){
+
         nav{
             position: relative;
         }
@@ -159,6 +164,9 @@
         font-size: 18px;
         font-weight: normal;
         text-align: center;
+    }
+    #news1 p{
+        margin-left: 10px;
     }
     #news1{
         padding: 10px;
@@ -245,7 +253,9 @@
         #dos{
             flex-direction: column;
         }
-        
+        #news1 p{
+        margin-left: 0px;
+    }
     }
     @media screen and (max-width:500px){
         
@@ -272,7 +282,7 @@
 <header>
     <nav>
         <div class="h1">
-            <p id="tit"><a href="index.html">the </p><p id="edm">EDM</p> <p id="tit">website</a></p>
+            <p id="tit"><a href="index.html">the </p><p id="edm">EM</p> <p id="tit">website</a></p>
         </div>
         
         <ul class="barre">

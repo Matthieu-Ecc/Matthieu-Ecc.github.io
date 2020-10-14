@@ -211,43 +211,38 @@
         box-shadow: inset 0 0 10px rgba(31, 31, 31, 0.753);
     }
     
-    
-.insider {
-
-    cursor: pointer;
+    .card-container {
+  cursor: pointer;
   margin-top: 20px;
   height: 500px;
-  position: relative;
-  width: 800px;
-  display: flex;
-  flex-direction: column;
+  
   margin-left: auto;
   margin-right: auto;
-  padding: 10px;
-  margin-bottom: 20px;
-}
+  margin-bottom: 30px;
 
+    }
 .card {
-  position: relative;
+
   transform-style: preserve-3d;
   transition: all 1s ease-in-out;
-  width: 800px;
+  width: 100%;
 }
-
 .card:hover {
   transform: rotateY(180deg);
 }
-
 .card .side {
-    backface-visibility: hidden;
-  position: absolute;
-  width: 800px;
-}
+  backface-visibility: hidden;
 
+  position: absolute;
+  width: 100%;
+  
+
+}
 .card .back {
-  justify-content: center;
   transform: rotateY(180deg);
 }
+
+
 #imggen{
     display: flex!important;
     border: solid;
@@ -471,12 +466,16 @@ h4{
 </header>
 
 
-    <div class="insider">
-        <div class="card">
-          <div class="side"><img src="covid.jpg" height="500px"></div>
-          <div class="side back"><img src="4couv.jpg" height="500px"></div>
+
+
+      <div class="cards">
+        <div class="card-container">
+          <div class="card">
+            <div class="side"><img src="covid.jpg" height="500px"></div>
+            <div class="side back"><img class="textjeu" src="4couv.jpg" height="500px"></div>
+          </div>
+        
         </div>
-      
       </div>
 <article>
     
