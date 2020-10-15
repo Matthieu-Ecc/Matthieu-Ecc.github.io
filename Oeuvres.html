@@ -221,6 +221,9 @@
 
     #chut{
         cursor: pointer;
+        margin: auto;
+        display: block;
+        margin-bottom: 30px;
     }
 
 
@@ -259,6 +262,7 @@
 }
 #imggen:hover{
     opacity: 1;
+    cursor: pointer;
     background-color:  rgba(255, 255, 255, 0.726);
 }
 #genese2{
@@ -421,35 +425,14 @@ h4{
         }
 
 
-    #card a {
-    text-decoration: none;
-    }
-    #card a:hover {
-    background: none;
-    }
-    #card a span {
-    display: none;
-    opacity: 0;
-    }
-    #card a:hover span {
-        opacity: 1;
-        float: left;
-        display: inline;
-        position: absolute;
-        margin-top:100px;
-        left: 40%;
-        width: 200px;
-        border:1px solid #363232ea;
-        background: #f2f2f2d7;
-        text-align: center;
-        color: #000000;
-    }
 
 </style>
 <title>EDM site</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <link rel="shortcut icon" href="em.ico" />
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+
 </head>
 <body>
 <header>
@@ -476,19 +459,29 @@ h4{
     <h5>― Les Œuvres ―</h5>
 </header>
 
-
-
-          <div id="card">
-            <a href="#"><span  onclick="couv4()">Cliquez pour voir le résumé</span><img id="chut" onclick="couv4()" src="covid.jpg" height="700px"></a>
-
-          </div>
+                <div id="app">
+                <div v-bind:title="message">
+                    <img id="chut" onclick="couv4()" src="covid.jpg" height="700px">
+                </div>
+                </div> 
 
 <article>
     
     <h1 class="redtitle1">AN 3 APRÈS COVID 21 </h1><h2 class="redtitle2">Tome 1 - Le Multiface</h2>
+
+    <h4>― Résumé ―</h4>
+    <p id="phi">Fin de l’été 2024 : Trois ans auparavant surgissait le <strong>Multiface</strong>, une terrible mutation du Covid poussant les nations aux portes du chaos. Désormais, tout le monde porte son Covtrack, un petit galet noir enregistrant en continu les interactions sociales de chacun tandis que la police du COVID veille au bon ordre. Cela n’empêche pas quatre étudiants partageant le même appartement de vivre leur jeunesse avec insouciance et passion, jusqu’à ce que le covtrack de l’un d’eux change de couleur…
+
+        <br>‘An 3 Après covid 21’ est une trilogie décrivant une vision dystopique de notre monde et dont ‘Le Multiface’ constitue le premier tome. 
+        </p>
+    
+<div>
+
+</div>
+
     <h4>― La genèse ―</h4>
-<div id="imggen">
-     <p id="genese">   Je réside en Guyane Française dans une solide villa juchée sur un terrain en pente, avec une vaste terrasse coincée entre le bleu d’une piscine et le vert d’un jardin chargé de fruits. La rue qui passe devant ma maison s’achève plus loin sur une longue plage avec derrière l’immense océan atlantique que l’on entend parfois gronder.
+<div id="imggen" onclick="afficher()">
+     <p id="genese" >   Je réside en Guyane Française dans une solide villa juchée sur un terrain en pente, avec une vaste terrasse coincée entre le bleu d’une piscine et le vert d’un jardin chargé de fruits. La rue qui passe devant ma maison s’achève plus loin sur une longue plage avec derrière l’immense océan atlantique que l’on entend parfois gronder.
         
         Autant dire que, lorsque la crise sanitaire s’est abattue en mars de cette année,  le confinement ne fut pas une expérience très pénible à vivre. Une citation dit qu’en toute difficulté, il faut voir une opportunité. Et c’est exactement ce que j’ai ressenti : L’opportunité de me poser et de renaitre différemment.
         
@@ -607,12 +600,10 @@ h4{
         if (element.src.match("covid"))
         {
         element.src="4couv.jpg";
-        document.querySelector("span").style.display = "none";
         }
         else
         {
         element.src="covid.jpg";
-        document.querySelector("span").style.display = "block";
         }
     }
 
@@ -680,6 +671,16 @@ var span2 = document.getElementsByClassName("close2")[0];
 span2.onclick = function() {
     modal2.style.display = "none";
 }
+
+
+var app = new Vue({
+    el: '#app',
+    data: {
+        message: 'Cliquez pour voir la 4ième de couverture'
+    }
+})
+
+
 </script>
 </body>
 </html>
