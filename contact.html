@@ -9,7 +9,9 @@
         padding: 0px;
         font-family: 'Courier New', Courier, monospace;
     }
-
+    ul{
+        padding-inline-start: 0px;
+    }
     nav{
         display: flex;
         justify-content: space-around;
@@ -65,7 +67,7 @@
         color: white;
         text-decoration: none;
         letter-spacing: 3px;
-        font-size: 14px;
+        font-size: 16px;
     }
     .menu{
         display:none;
@@ -100,7 +102,7 @@
         }
         .menu{
             display:block;
-        }
+        }        
     }
     .nav-active{
         transform: translateY(125%);
@@ -150,73 +152,69 @@
         height: 100px;
         filter : invert(1);
     }
-    h2, h3, h4{
-        text-transform: uppercase;
-        font-size: 18px;
-        font-weight: normal;
-    }
-    #news1{
-        margin-left: 60%;
-        margin-top: 100px;
-        position: relative;
-        text-align: justify;
-        width: 350px;
-        line-height: 40px;
-        margin-bottom: 100px;
-        color: rgb(2, 2, 122);
-    }
-    #inside1{
-        position: absolute;
-        top: 8%;
-        left: 20%;
 
-    }
-    #news2{
-        margin-left: 180px;
-        position: relative;
-        text-align: justify;
-        width: 400px;
-        line-height: 50px;
-        color: #f2f2f2;
-        margin-bottom: 100px;
-    }
-    #inside2{
-        position: absolute;
-        top: 10%;
-        left: 15%;
-    }
-    #news3{
-        position: relative;
-        text-align: center;
-        width: 200px;
+    article{
+        background-color: rgba(255, 255, 255, 0.726);
+        width: 60%;
+        align-content: center;
         margin: auto;
-        color: #f2f2f2;
-        font-size: 200px;
+        text-align: justify;
+        padding: 10px;
+        font-size: 19px;
+        padding-left: 50px;
+        padding-right: 50px;
+        word-spacing: 3px;
+        letter-spacing: 1px;
     }
-    #inside3{
-        position: absolute;
-        top: -48%;
-        left: 20%;    
-        padding: 0px;    
+
+    #part1{
+        padding-top: 5px;
+        text-align: center;
+        text-indent: 30px;
+        
+        line-height: 150%;
     }
+    
+    h5{
+        font-size: 30px;
+        font-weight: normal;
+        text-align: center;
+        text-transform: uppercase;
+        color: white;
+        word-spacing: 15px;
+        letter-spacing: 9px;
+        text-shadow: 2px 2px 3px black;
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+    
+
     @media screen and (max-width:900px){
         body{
             overflow-x: hidden;
         }
-        #news1, #news2, #news3{
-            margin: auto;
-            margin-top: 100px;
-        }
-    }
-    ul{
-        padding-inline-start: 0px;
-    }
         
+        article{
+            width: 100%;
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+        #part1{
+            margin-left: 10px;
+            margin-right: 10px;
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+        h5{
+            font-size: 20px;
+        }        
+    }
+
 </style>
 <title>EDM site</title>
-<link rel="shortcut icon" href="em.ico" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel="shortcut icon" href="em.ico" />
 </head>
 <body>
 <header>
@@ -240,34 +238,17 @@
         </div>
     </nav>
 </header>
-
-<div class="corps">
-    <div id="news1">
-        <img src="paper1.png" width="430px">
-        <div id="inside1"> 
-            <h2>Entrée dans le monde de la littérature</h2>
-            <p font size='14px' >“1111Pater noster, qui es in caelis sanctificetur nomen tuum adveniat regnum tuum fiat voluntas tua sicut in caelo et in terra. 
-                Panem era nos a malo. Amen.”
-            </p>
+<h5>― Contactez l'auteur ―</h5>
+<article>
+    <div id="tout">
+        
+        <div id="part1">
+            Pour joindre l'auteur dans un but professionel, ou personnel, contactez-le à cette adresse : <a href="emmanuelmeursault@emmanuelmeursault.com">emmanuelmeursault@emmanuelmeursault.com</a> </p>  
         </div>
+        
     </div>
-    <div id="news2">
-        <img src="tab.png" width="500px" height="400px">
-        <div id="inside2">
-            <h3>AN 3 APRES COVID</h3>
-            <p>“2222Pater noster, qui es in caelis sanctificetur nomen tuum adveniat regnum tuum inducas in tentationem sed libera nos a malo. Amen.”
-            </p>
-        </div>
-    </div>
-    <br><br><br>
-    <div id="news3">
-        <img src="tab2.png" width="200">
-        <div id="inside3">
-            <p> Φ </p>
-        </div>
-    </div>
-</div>
-<br><br><br><br>
+</article>
+<br><br><br>
 <footer> 
     <p>
     <a href="https://www.facebook.com"><img src="fb.png" height="40px" width="40px"></a>
