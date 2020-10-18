@@ -362,6 +362,9 @@ h4{
     }
 
 
+
+
+
      #h31, #h32{
          font-weight: normal;
             width: 50%;
@@ -377,7 +380,7 @@ h4{
             color: black;
             margin-top: 10px;
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
         }
         
         #h31:hover, #h32:hover{
@@ -388,6 +391,32 @@ h4{
         box-shadow: inset 0 0 10px rgba(31, 31, 31, 0.753);
         
         }
+        #down:hover{
+            cursor: pointer;
+            transition: 0.3s;
+            
+            box-shadow: inset 0 0 10px rgba(31, 31, 31, 0.753);
+        }
+        #down{
+    font-weight: normal;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 5%;
+    margin: auto;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0);
+    box-shadow: 0 0 2px rgba(31, 31, 31, 0.753);
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    text-decoration: none;
+    color: black;
+    filter:saturate(0%);
+    margin-top: 5px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 
         .modal {
         display: none;
@@ -400,7 +429,7 @@ h4{
         height: 100%; 
         overflow: auto; 
  
-        background-color: rgba(0, 0, 0, 0.473);
+        background-color: rgba(0, 0, 0, 0.875);
         margin-bottom: 500px;
         }
 
@@ -420,11 +449,21 @@ h4{
         text-align: justify;
         color: #ccc;
         font-size: large;
-        background-color: rgba(0, 0, 0, 0.575);
+        
         z-index: 5;
         height: 100%;
         -webkit-overflow-scrolling: touch;
         overflow: scroll;
+        }
+
+        #caption p, #caption2 p{
+            margin: auto;
+            padding: 50px;
+        }
+        #p2{
+            margin: auto;
+            padding: 50px;
+            text-align: center;
         }
 
         #extrait{
@@ -472,6 +511,7 @@ h4{
         }
 
 </style>
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 <script type="text/javascript" src="https://raw.github.com/LeaVerou/prefixfree/master/prefixfree.min.js"></script>
 <title>EDM site</title>
 
@@ -562,24 +602,61 @@ h4{
                     <div id="myModal" class="modal">
                         <span class="close">&times;</span>
                         
-                        <div id="caption"> <embed id='extrait' z-index='5' height="100%" width="100%" src=extrait2.pdf type='application/pdf'/> </div>
+                        <div id="caption"> <p id="p2">Extrait 1</p>
+                            <p>Marianne traversa sans appréhension l’impalpable nasse des CovCops. Juste derrière s’enfonçait l’escalier de la station Ampère. Au-dessus, un écran géant informait que la ville de Clermont-Ferrand allait être confinée à partir de minuit. Elle dévala de son pas nerveux les marches encombrées de badauds pour arriver à la rangée de portiques CovStop, derrière commençait la zone verte du réseau souterrain des métros de la ville.
+                            <br><br>Elle s’engagea dans un des portiques, avait déjà sorti son covTrack, le sésame qui lui permettrait d’ouvrir les portes lorsqu’elle aperçut dans celui placé à sa droite une petite dame âgée traînant un cabas et qui semblait en difficulté. Elle appliquait dans un geste répété et mal assuré son covtrack sur le senseur prévu à cet effet, mais les portes restaient closes tandis que le senseur vibrait légèrement en se teignant de rouge, comme un buzzer que l’on actionnerait sans cesse.
+                            <br><br>La petite dame s’obstinait, appliquant avec insistance son CovTrack, mais rien n’y faisait. Les portes ne s’ouvraient pas.
+                            <br><br>« Vous avez besoin d’aide ? » Marianne avait rejoint la vieille dame qui s’échinait sans succès.
+                            <br><br>Le visage ridé, d’abord méfiant, s’éclaira en découvrant cette jeune femme pimpante qui proposait ses services. « Je ne comprends pas, d’habitude ça marche toujours, peut-être que quelque chose est cassé dedans ? » et elle agita son CovTrack comme si elle s’attendait à percevoir le ballotement d’un composant qui se serait détaché.
+                            <br><br>« Je ne pense pas » lui répondit Marianne qui avait une idée assez précise de ce qui se passait. Il n’y avait pas que les CovCops qui contrôlaient la température. Tous les portiques CovStop le faisaient aussi. Et eux ne laissaient personne rentrer avec une température anormale.
+                            <br><br>« Vous pouvez activer votre CovTrack ?»
+                            <br><br>La demande avait embarrassé la vieille dame. Après tout, il s’agissait de données personnelles même si elle ne comprenant pas grand-chose à cette petite machine qui affichait toutes sortes de choses. Finalement, elle avait obéit avec réticence et appuyé un pouce osseux sur le petit galet noir. Sous l’empreinte digitale de sa propriétaire, le CovTrack avait vibré et le nombre 37.9° s’était affiché.
+                            <br><br>« C’est votre température, ils la mesurent pour chacun de nous » et Marianne indiqua l’étroit objectif de la caméra thermique du CovStop
+                            <br><br>qui les fixait toutes deux. « Vous ne pourrez pas prendre le métro avec cette température »
+                            <br><br>« Mais je vais faire comment ? Je ne vais quand même pas rentrer à pied » bégaya-t-elle, et son visage ridé se plissa encore plus pour ressembler à une petite pomme fripée.
+                            <br><br>Marianne lui sourit et la rassura. « Vous ne connaissez pas la procédure ? » Elle avait un peu haussé sa voix et ralenti son débit. « Vous présentez votre CovTrack à n’importe quel taxi » et elle pointa du doigt la surface. « Le chauffeur vous donnera un masque qu’il faudra porter et il vous ramènera chez vous. La course est prise en charge par la Sécu. » Elle réfléchit un instant et ajouta : « Et bien sûr votre médecin vous appellera pour discuter de votre température. »
+                            <br><br>La vieille dame l’avait remerciée et Marianne la regarda s’éloigner lentement. « Ai-je bien fait de l’aider ? » se demanda-t-elle d’un coup. Les personnes avec de la température et sans protection présentaient un risque, tout le monde le savait. Elle saisit soudain le petit flacon de gel hydro-alcoolique dont elle ne se séparait jamais et commença à se laver compulsivement les mains tandis qu’elle regardait la vieille dame remonter avec difficulté l’escalier, son cabas la tirant dangereusement en arrière à chaque franchissement de marche.
+                            <br><br>Marianne attendit de la voir sortir de son champ de vision, comme lentement avalée par l’extérieur. « Je deviens parano » se dit-elle tandis qu’elle appliquait son Covtrack sur le senseur. L’instant d’après, les portes du CovStop s’effaçaient devant elle. Elle avança de quelques pas, emprunta le couloir de droite et le bruit confus d’une rame arrivant dans la station lui parvint plus loin. « J’ai de la chance » se dit-elle en pressant le pas au milieu d’autres voyageurs qui, eux aussi, accéléraient.
+                        </p> </div>
                     
                     </div>
 
             </td>
-           
+           <td>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <div id="app1">
+                <div v-bind:title="message2">
+                <div id="down"><a href="extrait1.pdf" download="extrait1" target="_blank" class="button" ><i class="fa fa-download"></i></i></a></div>
+                </div>
+            </div>
+           </td>
         </tr>
+
         <tr>
             <td id="tdleft"> 
                 <h3 id="h32" class="lieu">Second extrait</h3>
                 <div id="myModal2" class="modal">
                     <span class="close2">&times;</span>
                     
-                    <div id="caption2"> <embed id='extrait' z-index='5' width="100%" height="100%" src=extrait1.pdf type='application/pdf'/> </div>
+                    <div id="caption2"> <p id="p2">Extrait 2</p>
+                        <p>
+                        Elle sortit très vite et tout de suite le soleil l’assaillit avec sa chaleur douce et sa clarté qui pleuvait sur le parc. Elle traversa le campus d’un pas rapide et croisa des étudiants souvent seuls, parfois agglutinés en maigres groupes. Elle les croisait dans une sorte de ballet maintenant parfaitement orchestré, chacun infléchissant subtilement sa trajectoire de sorte qu’ils ne s’approchaient jamais à moins de deux mètres.
+                        <br><br>Elle trouvait au début ce genre d’attitude absurde - après tout l’université était une zone verte à l’accès réglementé par des portiques CovStop – renforcés par des vigiles vraiment pas engageants. Tout cela suffisait normalement à transformer le campus en une sorte de sanctuaire.
+                        <br><br>Bien sûr il y avait eu des rumeurs sur la porosité de l’accès qui ne serait pas si réglementé que ça. Marianne n’y avait pas trop apporté de crédit, les attribuant à l’habituelle paranoïa qui couvait depuis l’apparition du multiface. Et puis six mois auparavant, elle avait eu cette expérience désagréable - presque angoissante - alors qu’elle s’était rendue à la médiathèque du campus, une exposition qu’elle attendait depuis longtemps et dont le contenu l’avait finalement un peu déçue.
+                        <br><br>Elle n’était pas repartie de suite, profitant de sa présence pour consulter un ouvrage rare qu’elle n’arrivait pas à retrouver sur le net. Dans l’immense bibliothèque attenante, elle avait réussi à le dénicher avec l’aide de la bibliothécaire, un livre imposant à la couverture rouge fatiguée, placé tout en haut d’une des grandes étagères trônant au centre de la salle principale. Elle l’avait saisi comme une sainte relique et s’était assise non loin. La salle était à peu prés déserte et trouver une table libre n’avait présenté aucune difficulté. 
+                        <br><br>L’ouvrage était vraiment intéressant et concentrait toute son attention. Elle devait le parcourir depuis une vingtaine de minutes, absorbée par sa lecture et ses prises de notes, photographiant avec son smartphone les passages qui en valaient la peine lorsque son CovTrack s’était mis à vibrer dans sa poche. Son cœur avait bondi dans sa poitrine. Dans le creux de son vêtement pulsait la vibration si particulière d’un statut non-vert en approche. Elle leva brusquement la tête, embrassant dans un regard circulaire et inquiet l’espace autour d’elle. Il n’y avait personne, hormis deux ou trois groupes d’étudiants attablés au loin. Et puis elle sentit soudain une présence dans son dos tandis que la vibration s’emballait dans sa poche. L’instant d’après, un étudiant en jogging blanc avec la tête enfouie dans sa capuche rabattue surgissait de nulle part et passait tout contre sa table. Elle perçut presque sur sa main le frôlement d’un des pans de sa veste qui battaient derrière lui.
+                        <br><br>Elle avait sorti son Covtrack : un flux d’ondes dorées parcourait sa surface noire pointant l’étudiant déjà loin, emporté par les grandes enjambées de sa démarche souple. Elle le regarda, incrédule, disparaitre entre les rayonnages de la salle tandis que son CovTrack cessait d’ondoyer son flot de vagues jaunes pour redevenir entièrement noir et silencieux.
+                        </p> </div>
                 
                 </div>
             </td>
-           
+            <td>
+                <div id="app2">
+                    <div v-bind:title="message3">
+                    <div id="down" ><a href="extrait2.pdf" download="extrait1" target="_blank" class="button" ><i class="fa fa-download"></i></i></a></div>
+                    
+                </div>       
+               </td>
         </tr>
 
 </article>
@@ -651,7 +728,17 @@ h4{
     }
 
 
-
+    function tel(){
+        element=document.getElementById('chut')
+        if (element.src.match("covid"))
+        {
+        element.src="4couv.jpg";
+        }
+        else
+        {
+        element.src="covid.jpg";
+        }
+    }
 
 
     function afficher(){
@@ -720,6 +807,18 @@ var app = new Vue({
     el: '#app',
     data: {
         message: 'Cliquez pour voir la 4ième de couverture'
+    }
+})
+var app1 = new Vue({
+    el: '#app1',
+    data: {
+        message2: 'télécharger le 1er extrait'
+    }
+})
+var app2 = new Vue({
+    el: '#app2',
+    data: {
+        message3: 'télécharger le 2nd extrait'
     }
 })
 
