@@ -39,9 +39,10 @@
     #edm{
         color: white;
         text-transform: uppercase;
-        letter-spacing: 5px;
         font-size: 30px;
+        text-align: center;
         padding: 5px;
+        font-family: 'Courier New', Courier;
     }
     #tit{
         
@@ -279,7 +280,7 @@
             color: black;
             margin-top: 10px;
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
         }
         
         #h31:hover{
@@ -302,7 +303,7 @@
         height: 100%; 
         overflow: auto; 
  
-        background-color: rgba(0, 0, 0, 0.473);
+        background-color: rgba(0, 0, 0, 0.873);
         margin-bottom: 500px;
         }
 
@@ -322,7 +323,7 @@
         text-align: justify;
         color: #ccc;
         font-size: large;
-        background-color: rgba(0, 0, 0, 0.575);
+
         z-index: 5;
         }
 
@@ -357,6 +358,40 @@
             cursor: pointer;
         }
 
+        #down:hover{
+            cursor: pointer;
+            transition: 0.3s;
+            
+            box-shadow: inset 0 0 10px rgba(31, 31, 31, 0.753);
+        }
+        #down{
+            font-weight: normal;
+            cursor: pointer;
+            transition: 0.3s;
+            width: 5%;
+            margin: auto;
+            border-radius: 30px;
+            background-color: rgba(255, 255, 255, 0);
+            box-shadow: 0 0 2px rgba(31, 31, 31, 0.753);
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-top: 5px;
+            text-decoration: none;
+            color: black;
+            filter:saturate(0%);
+            margin-top: 5px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        #caption p, #caption2 p{
+            margin: auto;
+            padding: 50px;
+        }   
+        #p2{
+            margin: auto;
+            padding: 50px;
+            text-align: center;
+        }
         @media screen and (max-width:900px){
 
         #boom, #monphi, #phi{
@@ -388,7 +423,9 @@
         margin-right: 0px;
         margin-bottom: 20px;
         }
-        
+        #caption p, #caption2 p{
+            padding: 10px;
+        }
     }
 
     @media screen and (max-width:600px){
@@ -417,7 +454,7 @@
 
 }
 </style>
-<title>EDM site</title>
+<title>Projets - Emmanuel Meursault</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <link rel="shortcut icon" href="em.ico" />
@@ -426,7 +463,7 @@
 <header>
     <nav>
         <div class="h1">
-            <p id="tit"><a href="index.html">the </p><p id="edm">EDM</p> <p id="tit">website</a></p>
+            <p id="tit"><a href="index.html"><p id="edm">Emmanuel Meursault</a></p>
         </div>
         
         <ul class="barre">
@@ -470,12 +507,37 @@
                         <div id="myModal" class="modal">
                             <span class="close">&times;</span>
                             
-                            <div id="caption"><embed id='extrait' src=extraitphi.pdf height=500 type='application/pdf'/></div>
+                            <div id="caption"> <p id="p2">CHAP 1 - PROLOGUE</p>
+                                <p>
+                                C’était la salle d’interrogatoire numéro 2. Une pièce blafarde de 5 mètres sur 3, avec son bureau en acier qui trônait au centre, les pieds solidement vissés à même le sol. Et cette lumière crue qui tombait du plafond et éclaboussait le plateau de métal froid. Frank se tenait bien droit sur sa chaise, regardant la flaque luisante qui s’étalait devant lui et le séparait des deux autres types assis en face. Eux aussi étaient immobiles. Un grand black mince qui semblait prendre soin de son corps et un blanc plus costaud, moins sec, complètement absorbé par la lecture d’un dossier qu’il avait ouvert devant lui. Le genre de gars qui a 30 ans était déjà un peu gras et qui, à cinquante ans, serait simplement gros. Le black était l’agent spécial Ellington et son collègue l’agent spécial Clark : c’est comme cela qu’ils s’étaient présentés. Les deux semblaient porter le même costume sombre, donnant l’impression bizarre d’être frères. En un coup d’oeil, Frank avait jaugé la texture des vestes, leurs coupes. « Pas du sur mesure, ça se devinait, mais clairement du haut gamme, des costumes à au moins deux / trois milles dollars pièce » s’était dit Franck. Ils n’ont pas envoyé n’importe qui pensa-t-il en restant impassible.
+                                <br><br>Pour se donner une contenance, il commença à parcourir la pièce du regard. En plus du bureau qui le séparait des deux types, il y avait l’inévitable petite caméra sur son trépied, greffier imperturbable de tout ce qui allait se passer.
+                                <br><br>Il tourna légèrement la tête et son regard accrocha le large miroir sans teint qui s’étalait sur tout un pan de mur avec dedans un homme pâle aux traits creusés et la chemise défaite qui le fixait. Il mit du temps à reconnaitre, dans cet homme vieilli aux yeux mangés par des poches immenses, son propre reflet.
+                                <br><br>« Seigneur pensa t-il, c’est à ça que je ressemble ? »
+                                <br><br>Il détourna très vite la tête et se concentra sur le reste de la pièce. Tout un tas de détails lui apparaissaient soudainement : la lézarde imperceptible qui partait de l’interrupteur et zigzaguait jusqu’au plafond, la plinthe à moitié décollé à l’un des angles de la pièce, la poignée noircie par la crasse… même la couleur des murs lui semblait légèrement différente, toujours grise bien sûr, mais un peu plus chaude. Curieux comme l’on peut connaitre par coeur un endroit et soudain s’y sentir étranger. « Ni tout à fait la même, Ni tout à fait une autre» avait écrit un poète français. C’est ce qu’éprouvait Franck avec cette pièce pourtant terriblement familière. D’ailleurs, combien d’heures avait-il passé dans cette salle ou une de ses jumelles ? Combien d’interrogatoires avait-il
+                                <br><br>mené ? Peut être des centaines. Cela faisait longtemps qu’il en avait perdu le compte.
+                                <br><br>Sauf qu’aujourd’hui, c’était différent. Parce qu’il n’était pas assis dos à la porte mais face à elle et que l’oeil de la caméra le fixait de son regard vide de poisson mort.
+                                <br><br>Une odeur de frites froides un peu entêtante envahit soudainement la pièce. Un des deux types venait de roter silencieusement et avait très adroitement dissipé son trop plein de gaz sans entrouvrir les lèvres.
+                                <br><br>« Lequel des deux ? » se demanda Frank soudainement intéressé. Aucun n’avait bougé, mais le grand black avait eu une imperceptible moue pendant une fraction de seconde tandis que son collègue restait impassible.
+                                <br><br>Mine de rien, Frank l’observa : « Toi, bonhomme, t’es agacé ! » il l’observa encore plus attentivement : « t’es agacé et t’es même écoeuré par l’attitude de ton partenaire, qui lui… en a strictement rien à faire » De fait, l’autre continuait de lire, impassible.
+                                <br><br>Mais Frank savait que l’homme ne lisait pas réellement. Malgré tout les efforts que l’agent spécial Clark faisait pour ne rien en laisser paraitre, son langage corporel le trahissait. La tension que Frank devinait à la naissance de ses épaules, son rythme de respiration, et d’autres détails plus imperceptibles, plus ténus, mais que Franck décryptait parfaitement, tout cela transpirait le prédateur épiant sa proie.
+                                <br><br>« Le tout est de savoir quand il va bondir » se demandait Frank en prenant soin de ne rien laisser filtrer de ses pensées. L’agent Clark continuait de lire pendant que l’odeur de frite froide se dissipait. Deux ou trois minutes s’écoulèrent encore dans un silence oppressant. Puis l’agent Clark referma lentement son dossier. Il redressa la tête, bougea légèrement pour se caler dans son siège tout en dépliant son bras vers la caméra. L’instant d’après une LED rouge s’était mise à clignoter juste sous l’objectif.
+                                <br><br>- Nous sommes le mercredi 2 mars 2016, il est… - Clark jeta un rapide coup d’oeil à sa montre – … 14h07. Je suis l’agent spécial Romuald Clark, accompagné de l’agent Joshua Ellington et nous commençons l’interrogatoire de l’agent spécial Franck Wallace dans les locaux de l’agence du FBI de New York.
+                                <br><br>- Alors Frank, comment ce merdier a commencé ?
+                                <br><br>La voix était aimable mais Clark le fixait d’un regard clair et froid d’où toute compassion avait été évacuée. A son coté, l’agent Ellington avait esquissé un sourire laissant apparaitre l’éclat de ses canines. « Ca y est se dit-il, les fauves sont lâchés. »
+                                <br><br>- Comment c’a commencé ? répéta Frank en se calant à son tour sur sa chaise étroite. Il laissa passer deux ou trois secondes, comme pour se donner un ultime répit. Il savait que sa marge de manoeuvre était très étroite et que les heures qui allaient suivre détermineraient sans doute le reste de sa vie. Puis il décida lui aussi de plonger dans l’arène. De toute façon, il n’avait pas le choix.
+                                <br><br>- Comment c’a commencé ? répéta–t’il lentement en fronçant ses sourcils : Ca a commencé à mon retour du Dakota du Sud.</p> </div>
                         
                         </div>
             
                 </td>
-               
+                <td>
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                    <div id="app">
+                        <div v-bind:title="message">
+                        <div id="down"><a href="extraitphi.pdf" download="extraitphi" target="_blank" class="button" ><i class="fa fa-download"></i></a></div>
+                        </div>
+                    </div>
+                   </td>
             </tr>
         </div>
 </div>
@@ -560,6 +622,14 @@
     span.onclick = function() {
         modal.style.display = "none";
     }
+
+
+var app = new Vue({
+    el: '#app',
+    data: {
+        message: 'Télécharger le prologue'
+    }
+})
 </script>
 </body>
 </html>

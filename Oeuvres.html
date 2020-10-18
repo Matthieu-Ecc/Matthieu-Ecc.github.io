@@ -39,9 +39,10 @@
     #edm{
         color: white;
         text-transform: uppercase;
-        letter-spacing: 5px;
         font-size: 30px;
+        text-align: center;
         padding: 5px;
+        font-family: 'Courier New', Courier;
     }
     #tit{
         color: white;
@@ -335,31 +336,7 @@ h4{
         
     }
 
-    @media screen and (max-width:900px){
-        article, #stp{
-            width: 100%;
-            padding-left: 0px;
-            padding-right: 0px;
-            
-        }
-        article p, #imggen{
-            margin-left: 10px!important;
-            margin-right: 10px!important;
-        }
-        #genese2{
-            line-height: normal;
-        }
-        h5{
-            font-size: 20px;
-        }
-        #phi{
-            line-height: normal;
-        }
-        #chut, #book1 img{
-            width: 80%;
-        }
-        
-    }
+    
 
 
 
@@ -509,11 +486,38 @@ h4{
             }
 
         }
+        @media screen and (max-width:900px){
+        article, #stp{
+            width: 100%;
+            padding-left: 0px;
+            padding-right: 0px;
+            
+        }
+        article p, #imggen{
+            margin-left: 10px!important;
+            margin-right: 10px!important;
+        }
+        #genese2{
+            line-height: normal;
+        }
+        h5{
+            font-size: 20px;
+        }
+        #phi{
+            line-height: normal;
+        }
+        #chut, #book1 img{
+            width: 80%;
+        }
+        #caption p, #caption2 p{
+            padding: 10px;
+        }
+    }
 
 </style>
 <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 <script type="text/javascript" src="https://raw.github.com/LeaVerou/prefixfree/master/prefixfree.min.js"></script>
-<title>EDM site</title>
+<title>Œuvres - Emmanuel Meursault</title>
 
 
 </head>
@@ -521,7 +525,7 @@ h4{
 <header>
     <nav>
         <div class="h1">
-            <a href="index.html"><p id="edm">EDM</p></a> <p id="tit">website</p>
+            <p id="tit"><a href="index.html"><p id="edm">Emmanuel Meursault</a></p>
         </div>
         
         <ul class="barre">
@@ -602,7 +606,7 @@ h4{
                     <div id="myModal" class="modal">
                         <span class="close">&times;</span>
                         
-                        <div id="caption"> <p id="p2">Extrait 1</p>
+                        <div id="caption"> <p id="p2">An 3 après covid 21 - EXTRAIT 01</p>
                             <p>Marianne traversa sans appréhension l’impalpable nasse des CovCops. Juste derrière s’enfonçait l’escalier de la station Ampère. Au-dessus, un écran géant informait que la ville de Clermont-Ferrand allait être confinée à partir de minuit. Elle dévala de son pas nerveux les marches encombrées de badauds pour arriver à la rangée de portiques CovStop, derrière commençait la zone verte du réseau souterrain des métros de la ville.
                             <br><br>Elle s’engagea dans un des portiques, avait déjà sorti son covTrack, le sésame qui lui permettrait d’ouvrir les portes lorsqu’elle aperçut dans celui placé à sa droite une petite dame âgée traînant un cabas et qui semblait en difficulté. Elle appliquait dans un geste répété et mal assuré son covtrack sur le senseur prévu à cet effet, mais les portes restaient closes tandis que le senseur vibrait légèrement en se teignant de rouge, comme un buzzer que l’on actionnerait sans cesse.
                             <br><br>La petite dame s’obstinait, appliquant avec insistance son CovTrack, mais rien n’y faisait. Les portes ne s’ouvraient pas.
@@ -638,7 +642,7 @@ h4{
                 <div id="myModal2" class="modal">
                     <span class="close2">&times;</span>
                     
-                    <div id="caption2"> <p id="p2">Extrait 2</p>
+                    <div id="caption2"> <p id="p2">An 3 après covid 21 - EXTRAIT 02</p>
                         <p>
                         Elle sortit très vite et tout de suite le soleil l’assaillit avec sa chaleur douce et sa clarté qui pleuvait sur le parc. Elle traversa le campus d’un pas rapide et croisa des étudiants souvent seuls, parfois agglutinés en maigres groupes. Elle les croisait dans une sorte de ballet maintenant parfaitement orchestré, chacun infléchissant subtilement sa trajectoire de sorte qu’ils ne s’approchaient jamais à moins de deux mètres.
                         <br><br>Elle trouvait au début ce genre d’attitude absurde - après tout l’université était une zone verte à l’accès réglementé par des portiques CovStop – renforcés par des vigiles vraiment pas engageants. Tout cela suffisait normalement à transformer le campus en une sorte de sanctuaire.
@@ -812,13 +816,13 @@ var app = new Vue({
 var app1 = new Vue({
     el: '#app1',
     data: {
-        message2: 'télécharger le 1er extrait'
+        message2: 'Télécharger le pdf du 1er extrait'
     }
 })
 var app2 = new Vue({
     el: '#app2',
     data: {
-        message3: 'télécharger le 2nd extrait'
+        message3: 'Télécharger le pdf du 2nd extrait'
     }
 })
 
