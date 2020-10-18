@@ -1,5 +1,10 @@
-<html>
+<!DOCTYPE html>
+<html lang="fr">
 <head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel="shortcut icon" href="em.ico" />
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
 <style>
     body{
         background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/1400/bc86ac75296439.5c48aa8646a3d.png);
@@ -305,7 +310,7 @@ h4{
 .venir{
     margin: 20px;
     text-align: center;
-    font-weight: 20px;
+    
 }
 @media screen and (max-width:900px){
         article, #stp{
@@ -466,18 +471,16 @@ h4{
         }
 
 </style>
+<script type="text/javascript" src="https://raw.github.com/LeaVerou/prefixfree/master/prefixfree.min.js"></script>
 <title>EDM site</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<link rel="shortcut icon" href="em.ico" />
-<script src="https://unpkg.com/vue/dist/vue.js"></script>
+
 
 </head>
 <body>
 <header>
     <nav>
         <div class="h1">
-            <p id="tit"><a href="index.html">the </p><p id="edm">EDM</p> <p id="tit">website</a></p>
+            <a href="index.html"><p id="edm">EDM</p></a> <p id="tit">website</p>
         </div>
         
         <ul class="barre">
@@ -500,7 +503,7 @@ h4{
 
                 <div id="app">
                 <div v-bind:title="message">
-                    <img id="chut" onclick="couv4()" src="covid.jpg" width="500px">
+                    <img alt="couverture" id="chut" onclick="couv4()" src="covid.jpg" width="500px">
                 </div>
                 </div> 
 
@@ -533,7 +536,7 @@ h4{
         Je rentrai en Guyane juste à temps pour fêter mon anniversaire, le 8 mars. Une semaine après, le pays était confiné. C’est à ce moment que ma mue s’est accélérée. J’ai très vite eu l’impression d’être au cœur d’un événement rare, comme il n’en survient que très peu par siècle. La réécriture de mon ancien scénario allait attendre. Je vivais en direct un moment unique qu’il me fallait saisir immédiatement.
         
         J’ai toujours eu une imagination fertile. Il me suffisait d’être une éponge et d’absorber ce que je lisais, ce que j’entendais, ce que je voyais, ce que je ressentais. J’ai pris mon stylo et un paquet de feuilles blanches. Mon subconscient a fait le reste. C’est comme cela qu’est né ‘An 3 après Covid 21’.
-        </p> <img src="flechebas.png" width="20px" onclick="afficher()">
+        </p> <img alt="click" src="flechebas.png" width="20px" onclick="afficher()">
     </div>
     <p id="genese2" onclick="cacher()">   Je réside en Guyane Française dans une solide villa juchée sur un terrain en pente, avec une vaste terrasse coincée entre le bleu d’une piscine et le vert d’un jardin chargé de fruits. La rue qui passe devant ma maison s’achève plus loin sur une longue plage avec derrière l’immense océan atlantique que l’on entend parfois gronder.
         
@@ -581,7 +584,7 @@ h4{
 </article>
 <br><br><br><br>
 <br><br>
-<div id="book1"><img src="phi.png" width="500px"></div>
+<div id="book1"><img alt="couverture phi" src="phi.png" width="500px"></div>
 <br><br>
 <article>
 
@@ -592,10 +595,10 @@ h4{
 </article>
 <br><br><br>
 <footer> 
-    <p>
-    <a href="https://www.facebook.com"><img src="fb.png" height="40px" width="40px"></a>
-    <a href="https://www.instagram.com"><img src="insta.png"height="40px" width="40px"></a>
-    </p>
+    
+    <a href="https://www.facebook.com"><img alt="fb" src="fb.png" height="40px" width="40px"></a>
+    <a href="https://www.instagram.com"><img alt="insta" src="insta.png" height="40px" width="40px"></a>
+    
     <div id="resumenu">
         <ul>
             <li><a href="auteur.html">L'auteur</a></li>
@@ -609,7 +612,7 @@ h4{
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </div>
-    <img id="signe" src="signature.png">
+    <img alt="signature" id="signe" src="signature.png">
 </footer>
 
 <script>
