@@ -150,7 +150,8 @@
         filter : invert(1);
     }
     article{
-        background-color: rgba(255, 255, 255, 0.726);
+        background-color: rgba(0, 0, 0, 0.493);
+        color: white;
         width: 50%;
         align-content: center;
         margin: auto;
@@ -166,13 +167,13 @@
         filter: drop-shadow(10px 10px 3px rgba(0, 0, 0, 0.582));
     }
     .redtitle1{
-        color: rgb(0, 0, 0);
+        color: white;
         font-size: 27px;
         text-align: center;
         
     }
     .redtitle2{
-        color: rgb(0, 0, 0);
+        color: white;
         font-size: 18px;
         text-align: center;
     }
@@ -192,24 +193,27 @@
     #projet a{
         border-radius: 30px;
         background-color: rgba(255, 255, 255, 0);
-        box-shadow: 0 0 2px rgba(31, 31, 31, 0.753);
-        padding-left: 15px;
-        padding-right: 15px;
-        text-decoration: none;
-        color: black;
-        margin-top: 5px;
+        box-shadow: 0 0 4px rgba(255, 255, 255, 0.753);
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 5px;
+        padding-bottom: 5px;
         transition: 0.3s;
+        text-decoration: none;
+        font-weight: bold;
+        color: rgb(255, 255, 255);
+        margin-top: 5px;
     }
     #projet{
         font-size: 18px;
         
     }
     #projet a:hover{
-        cursor: pointer;
         transition: 0.3s;
-            color: white;
-        background-color: rgba(0, 0, 0, 0.507);
-        box-shadow: inset 0 0 10px rgba(31, 31, 31, 0.753);
+        cursor: pointer;
+        color: rgb(0, 0, 0);
+        background-color: rgba(255, 255, 255, 0.87);
+        box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.568);
     }
     
 
@@ -230,13 +234,11 @@
 
 
 #imggen{
-    border: solid;
-    border-color: rgba(0, 0, 0, 0.377);
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
     padding: 15px;
-    opacity: 0.7;
+    transition: 0.3s;
     word-spacing: -.4ch;
     font-size: 17px;
     
@@ -244,10 +246,12 @@
 #imggen img{
     margin: auto;
     margin-top: 5px;
+    filter: grayscale(100%) brightness(800%);
     display: block;
+    opacity: 1;
 }
 #genese{
-
+    transition: 0.3s;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
@@ -260,23 +264,27 @@
 #imggen img:hover{
     opacity: 1;
     cursor: pointer;
+
 }
 #imggen:hover{
     opacity: 1;
     cursor: pointer;
-    background-color:  rgba(255, 255, 255, 0.726);
+    border: solid;
+    border-color: white;
+    transition: 0.3s;
 }
 #genese2{
     visibility: hidden;
     height: 0px;
+    line-height: 1.3;
     border: solid;
     border-color: rgba(0, 0, 0, 0.377);
-    background-color:  rgba(255, 255, 255, 0.726);
+    background-color: rgba(0, 0, 0, 0.493);
     cursor: pointer;
     padding: 15px;
     
     word-spacing: -.4ch;
-    font-size: 17px;
+    font-size: 18px;
     margin-block-start: 0px;
 }
 h4{
@@ -286,11 +294,11 @@ h4{
     
 }
 #phi{
-    border: solid;
     word-spacing: -.4ch;
-    font-size: 17px;
-    border-color: rgba(0, 0, 0, 0.377);
-    background-color:  rgba(255, 255, 255, 0.726);
+    font-size: 18px;
+    line-height: 1.3;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.493);
     padding: 15px;
     margin-block-start: 0px;
 }
@@ -345,11 +353,11 @@ h4{
             margin: auto;
             border-radius: 30px;
             background-color: rgba(255, 255, 255, 0);
-            box-shadow: 0 0 2px rgba(31, 31, 31, 0.753);
+            box-shadow: 0 0 4px rgba(255, 255, 255, 0.753);
             padding-left: 15px;
             padding-right: 15px;
             text-decoration: none;
-            color: black;
+            color: white;
             margin-top: 10px;
             text-align: center;
             margin-bottom: 10px;
@@ -358,16 +366,18 @@ h4{
         #h31:hover, #h32:hover{
             cursor: pointer;
             transition: 0.3s;
-            color: white;
-        background-color: rgba(0, 0, 0, 0.507);
-        box-shadow: inset 0 0 10px rgba(31, 31, 31, 0.753);
+            color: rgb(0, 0, 0);
+        background-color: rgba(255, 255, 255, 0.87);
+        box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.568);
         
         }
         #down:hover{
             cursor: pointer;
             transition: 0.3s;
-            
-            box-shadow: inset 0 0 10px rgba(31, 31, 31, 0.753);
+            color: rgb(0, 0, 0);
+        background-color: rgba(255, 255, 255, 0.87);
+        box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.568);
+        filter: grayscale(100%) brightness(100%);
         }
         #down{
     font-weight: normal;
@@ -377,13 +387,13 @@ h4{
     margin: auto;
     border-radius: 30px;
     background-color: rgba(255, 255, 255, 0);
-    box-shadow: 0 0 2px rgba(31, 31, 31, 0.753);
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.753);
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 5px;
     text-decoration: none;
-    color: black;
-    filter:saturate(0%);
+    color: white;
+            filter: grayscale(100%) brightness(800%);
     margin-top: 5px;
     text-align: center;
     margin-bottom: 20px;
@@ -425,22 +435,24 @@ h4{
         z-index: 5;
         height: 100%;
         -webkit-overflow-scrolling: touch;
-        overflow: scroll;
+
         }
 
-        #caption p, #caption2 p{
+        #poto, #poto2{
             margin: auto;
             padding: 50px;
+            margin-bottom: 100px;
         }
         #p2{
             margin: auto;
             padding: 50px;
             text-align: center;
+            margin-bottom: 30px;
         }
 
         #extrait{
             background-color: rgba(255, 255, 255, 0.726);
-        overflow: scroll;
+
         }
 
         
@@ -504,7 +516,7 @@ h4{
         #chut, #book1 img{
             width: 80%;
         }
-        #caption p, #caption2 p{
+        #poto, #poto2{
             padding: 10px;
         }
     }
@@ -695,7 +707,7 @@ h4{
                         <span class="close">&times;</span>
                         
                         <div id="caption"> <p id="p2">An 3 après covid 21 - EXTRAIT 01</p>
-                            <p>Marianne traversa sans appréhension l’impalpable nasse des CovCops. Juste derrière s’enfonçait l’escalier de la station Ampère. Au-dessus, un écran géant informait que la ville de Clermont-Ferrand allait être confinée à partir de minuit. Elle dévala de son pas nerveux les marches encombrées de badauds pour arriver à la rangée de portiques CovStop, derrière commençait la zone verte du réseau souterrain des métros de la ville.
+                            <p id="poto">Marianne traversa sans appréhension l’impalpable nasse des CovCops. Juste derrière s’enfonçait l’escalier de la station Ampère. Au-dessus, un écran géant informait que la ville de Clermont-Ferrand allait être confinée à partir de minuit. Elle dévala de son pas nerveux les marches encombrées de badauds pour arriver à la rangée de portiques CovStop, derrière commençait la zone verte du réseau souterrain des métros de la ville.
                             <br><br>Elle s’engagea dans un des portiques, avait déjà sorti son covTrack, le sésame qui lui permettrait d’ouvrir les portes lorsqu’elle aperçut dans celui placé à sa droite une petite dame âgée traînant un cabas et qui semblait en difficulté. Elle appliquait dans un geste répété et mal assuré son covtrack sur le senseur prévu à cet effet, mais les portes restaient closes tandis que le senseur vibrait légèrement en se teignant de rouge, comme un buzzer que l’on actionnerait sans cesse.
                             <br><br>La petite dame s’obstinait, appliquant avec insistance son CovTrack, mais rien n’y faisait. Les portes ne s’ouvraient pas.
                             <br><br>« Vous avez besoin d’aide ? » Marianne avait rejoint la vieille dame qui s’échinait sans succès.
@@ -731,7 +743,7 @@ h4{
                     <span class="close2">&times;</span>
                     
                     <div id="caption2"> <p id="p2">An 3 après covid 21 - EXTRAIT 02</p>
-                        <p>
+                        <p id="poto2">
                         Elle sortit très vite et tout de suite le soleil l’assaillit avec sa chaleur douce et sa clarté qui pleuvait sur le parc. Elle traversa le campus d’un pas rapide et croisa des étudiants souvent seuls, parfois agglutinés en maigres groupes. Elle les croisait dans une sorte de ballet maintenant parfaitement orchestré, chacun infléchissant subtilement sa trajectoire de sorte qu’ils ne s’approchaient jamais à moins de deux mètres.
                         <br><br>Elle trouvait au début ce genre d’attitude absurde - après tout l’université était une zone verte à l’accès réglementé par des portiques CovStop – renforcés par des vigiles vraiment pas engageants. Tout cela suffisait normalement à transformer le campus en une sorte de sanctuaire.
                         <br><br>Bien sûr il y avait eu des rumeurs sur la porosité de l’accès qui ne serait pas si réglementé que ça. Marianne n’y avait pas trop apporté de crédit, les attribuant à l’habituelle paranoïa qui couvait depuis l’apparition du multiface. Et puis six mois auparavant, elle avait eu cette expérience désagréable - presque angoissante - alors qu’elle s’était rendue à la médiathèque du campus, une exposition qu’elle attendait depuis longtemps et dont le contenu l’avait finalement un peu déçue.
