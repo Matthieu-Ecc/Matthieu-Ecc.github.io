@@ -22,6 +22,9 @@
         justify-content: space-around;
         align-items: center;
         min-height: 8vh;
+        top: 0;
+        width: 100%;
+        z-index: 3;
         background-color: rgba(0, 0, 0, 0.123);
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     }
@@ -80,42 +83,34 @@
         margin: 5px;
     }
 
+    .barrelaeho{
+            list-style-type: none;
+            text-align: center;
+    }
+    .barrelaeho a{
+        text-decoration: none;
+        color: white;
+
+    }
+    .barrelaeho li{
+            padding: 10px;
+        }
+
     @media screen and (max-width:900px){
-        body{
-            overflow-x: hidden;
-        }
+
+
         .barre{
-            position: absolute;
-            top:-105%;
-            height: 92vh;
-            z-index: 4;
-            background-color: #000000e1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 50%;
-            transform: translateY(0%);
-            transition: transform 0.5s ease-in;
+            display: none;
+            
         }
-        .barre li{
-            opacity: 0;
-        }
+
+
+
         .menu{
             display:block;
-        }
-    }
-    .nav-active{
-        transform: translateY(125%);
-    }
-    @keyframes navFade{
-        from{
-            opacity: 0;
-            transform: translateX(50px);
-        }
-        to{
-            opacity: 1;
-            transform: translateX(0px)
-        }
+            margin: 10px;
+        }   
+    
     }
 
     footer{
@@ -513,6 +508,82 @@ h4{
             padding: 10px;
         }
     }
+    #reseau:hover{
+        cursor: pointer;
+    }
+
+    .lana {
+        display: none;
+        position: fixed; 
+        z-index: 1; 
+        padding-top: 50px; 
+        margin: auto;
+        right: 0;
+        top: 100px;
+        width: 100%; 
+        height: 100%; 
+        background-color: rgba(0, 0, 0, 0.875);
+        }
+
+        .lana-content {
+        margin: auto;
+        display: block;
+        width: 60%;
+        max-width: 500px;
+        padding: 20px;
+        }
+
+        
+        #captionlana{
+        margin: auto;
+        display: block;
+        width: 80%;
+        text-align: justify;
+        color: #ccc;
+        font-size: large;
+        
+        z-index: 5;
+
+        -webkit-overflow-scrolling: touch;
+
+        }
+
+        #captionlana li{
+            margin: auto;
+            padding: 10px;
+        }
+
+
+        
+        .lana-content, #captionlana{
+        animation-name: zoom;
+        animation-duration: 0.6s;
+        }
+
+        @keyframes zoom {
+            from {
+                transform:scale(0)
+            }
+            to {
+                transform:scale(1)
+            }
+        }
+
+        
+        .close3{
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: whitesmoke;
+            font-size: 30px;
+            transition: 0.3s;
+        }
+
+        .close3:hover, .close3:focus{
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
 
 </style>
 <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
@@ -536,13 +607,29 @@ h4{
             <li><a href="news.html">News</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
-        <div class="menu">
+        <div class="menu" id="h33">
             <div class="top"></div>
             <div class="middle"></div>
             <div class="bottom"></div>
         </div>
     </nav>
-
+    <tr>
+        <td id="tdleft">
+            <div id="mylana" class="lana">
+                <span class="close3">&times;</span>
+                <div id="captionlana"> 
+                    <ul class="barrelaeho">
+                        <li><a href="auteur.html">L'auteur</a></li>
+                        <li><a href="Oeuvres.html">Œuvres </a></li>
+                        <li><a href="Projets.html">Projets</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </td>
+    </tr>
     <h5>― Les Œuvres ―</h5>
 </header>
 
@@ -698,26 +785,6 @@ h4{
 </footer>
 
 <script>
-    const navSlide = () =>{
-        const menu = document.querySelector('.menu');
-        const nav = document.querySelector('.barre');
-        const laBarre = document.querySelectorAll('.barre li');
-
-        menu.addEventListener('click', () => {
-            
-            nav.classList.toggle('nav-active');
-
-            laBarre.forEach((link,index)=>{
-                if(link.style.animation){
-                    link.style.animation = '';
-                }
-                else{
-                    link.style.animation = `navFade 0.5s ease forwards ${index/7}s`;
-                }
-            });
-        });
-    }
-    navSlide();
 
     function couv4(){
         element=document.getElementById('chut')
@@ -781,7 +848,6 @@ var img = document.getElementById("h31");
 
 img.onclick = function(){
     modal.style.display = "block";
-    modalImg.src = this.src;
 }
 
 var span = document.getElementsByClassName("close")[0];
@@ -797,7 +863,6 @@ var modal2 = document.getElementById("myModal2");
 var img2 = document.getElementById("h32");
 img2.onclick = function(){
     modal2.style.display = "block";
-    modalImg2.src = this.src;
 }
 
 var span2 = document.getElementsByClassName("close2")[0];
@@ -805,6 +870,23 @@ var span2 = document.getElementsByClassName("close2")[0];
 span2.onclick = function() {
     modal2.style.display = "none";
 }
+
+
+var lana = document.getElementById("mylana");
+
+var img = document.getElementById("h33");
+
+img.onclick = function(){
+    lana.style.display = "block";
+    
+}
+
+var span3 = document.getElementsByClassName("close3")[0];
+
+span3.onclick = function() {
+    lana.style.display = "none";
+}
+
 
 
 var app = new Vue({

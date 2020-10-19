@@ -9,7 +9,9 @@
         padding: 0px;
         font-family: 'Courier New', Courier, monospace;
     }
-
+    ul{
+        padding-inline-start: 0px;
+    }
     nav{
         display: flex;
         justify-content: space-around;
@@ -18,7 +20,7 @@
         background-color: rgba(0, 0, 0, 0.123);
         
         top: 0;
-        
+        width: 100%;
         z-index: 3;
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     
@@ -37,9 +39,10 @@
     #edm{
         color: white;
         text-transform: uppercase;
-        letter-spacing: 5px;
         font-size: 30px;
+        text-align: center;
         padding: 5px;
+        font-family: 'Courier New', Courier;
     }
     #tit{
         
@@ -77,43 +80,34 @@
         background-color: white;
         margin: 5px;
     }
+    .barrelaeho{
+            list-style-type: none;
+            text-align: center;
+    }
+    .barrelaeho a{
+        text-decoration: none;
+        color: white;
+
+    }
+    .barrelaeho li{
+            padding: 10px;
+        }
 
     @media screen and (max-width:900px){
-        body{
-            overflow-x: hidden;
-        }
+
+
         .barre{
-            position: absolute;
-            top:-105%;
-            height: 92vh;
-            z-index: 4;
-            background-color: #000000e1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 50%;
-            transform: translateY(0%);
-            transition: transform 0.5s ease-in;
+            display: none;
+            
         }
-        .barre li{
-            opacity: 0;
-        }
+
+
+
         .menu{
             display:block;
-        }
-    }
-    .nav-active{
-        transform: translateY(125%);
-    }
-    @keyframes navFade{
-        from{
-            opacity: 0;
-            transform: translateX(50px);
-        }
-        to{
-            opacity: 1;
-            transform: translateX(0px)
-        }
+            margin: 10px;
+        }   
+    
     }
 
     footer{
@@ -150,79 +144,167 @@
         height: 100px;
         filter : invert(1);
     }
-    h2, h3, h4{
-        text-transform: uppercase;
-        font-size: 18px;
-        font-weight: normal;
-    }
-    #news1{
-        margin-left: 60%;
-        margin-top: 100px;
-        position: relative;
-        text-align: justify;
-        width: 350px;
-        line-height: 40px;
-        margin-bottom: 100px;
-        color: rgb(2, 2, 122);
-    }
-    #inside1{
-        position: absolute;
-        top: 8%;
-        left: 20%;
 
-    }
-    #news2{
-        margin-left: 180px;
-        position: relative;
-        text-align: justify;
-        width: 400px;
-        line-height: 50px;
-        color: #f2f2f2;
-        margin-bottom: 100px;
-    }
-    #inside2{
-        position: absolute;
-        top: 10%;
-        left: 15%;
-    }
-    #news3{
-        position: relative;
-        text-align: center;
-        width: 200px;
+    article{
+        background-color: rgba(255, 255, 255, 0.726);
+        width: 70%;
+        align-content: center;
         margin: auto;
-        color: #f2f2f2;
-        font-size: 200px;
+        text-align: justify;
+        padding: 10px;
+        font-size: 15px;
+        padding-left: 50px;
+        padding-right: 50px;
+        word-spacing: 3px;
+        letter-spacing: 1px;
     }
-    #inside3{
-        position: absolute;
-        top: -48%;
-        left: 20%;    
-        padding: 0px;    
+    #photo{
+            text-align: center;
+            margin: 30px;
+            filter: drop-shadow(10px 10px 3px rgba(0, 0, 0, 0.582));
     }
+    #part1, #part2{
+        padding-top: 5px;
+        text-align: justify;
+        text-indent: 30px;
+        
+        line-height: 150%;
+    }
+    
+    h5{
+        font-size: 30px;
+        font-weight: normal;
+        text-align: center;
+        text-transform: uppercase;
+        color: white;
+        word-spacing: 15px;
+        letter-spacing: 9px;
+        text-shadow: 2px 2px 3px black;
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+    
+
     @media screen and (max-width:900px){
         body{
             overflow-x: hidden;
         }
-        #news1, #news2, #news3{
-            margin: auto;
-            margin-top: 100px;
-        }
-    }
-    ul{
-        padding-inline-start: 0px;
-    }
         
+        article{
+            width: 100%;
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+        #part1, #part2, #part3{
+            margin-left: 10px;
+            margin-right: 10px;
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+        h5{
+            font-size: 20px;
+        
+        }
+
+
+    }
+    @media screen and (max-width:600px){
+        #part1, #part2{
+            text-align: left; 
+        } 
+        #photo img{
+            width: 70%;
+        }  
+    }
+
+    #reseau:hover{
+        cursor: pointer;
+    }
+
+    .modal {
+        display: none;
+        position: fixed; 
+        z-index: 1; 
+        padding-top: 50px; 
+        margin: auto;
+        right: 0;
+        top: 100px;
+        width: 100%; 
+        height: 100%; 
+        background-color: rgba(0, 0, 0, 0.875);
+        }
+
+        .modal-content {
+        margin: auto;
+        display: block;
+        width: 60%;
+        max-width: 500px;
+        padding: 20px;
+        }
+
+        
+        #caption{
+        margin: auto;
+        display: block;
+        width: 80%;
+        text-align: justify;
+        color: #ccc;
+        font-size: large;
+        
+        z-index: 5;
+
+        -webkit-overflow-scrolling: touch;
+
+        }
+
+        #caption li{
+            margin: auto;
+            padding: 10px;
+        }
+
+
+        
+        .modal-content, #caption{
+        animation-name: zoom;
+        animation-duration: 0.6s;
+        }
+
+        @keyframes zoom {
+            from {
+                transform:scale(0)
+            }
+            to {
+                transform:scale(1)
+            }
+        }
+
+        
+        .close{
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: whitesmoke;
+            font-size: 30px;
+            transition: 0.3s;
+        }
+
+        .close:hover, .close:focus{
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
 </style>
-<title>EDM site</title>
-<link rel="shortcut icon" href="em.ico" />
+<title>Auteur - Emmanuel Meursault</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel="shortcut icon" href="em.ico" />
 </head>
 <body>
 <header>
     <nav>
         <div class="h1">
-            <p id="tit"><a href="index.html">the </p><p id="edm">EDM</p> <p id="tit">website</a></p>
+            <p id="tit"><a href="index.html"><p id="edm">Emmanuel Meursault</a></p>
         </div>
         
         <ul class="barre">
@@ -233,41 +315,51 @@
             <li><a href="news.html">News</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
-        <div class="menu">
+        <div class="menu" id="h31">
             <div class="top"></div>
             <div class="middle"></div>
             <div class="bottom"></div>
         </div>
     </nav>
+    <tr>
+        <td id="tdleft">
+            <div id="myModal" class="modal">
+                <span class="close">&times;</span>
+                <div id="caption"> 
+                    <ul class="barrelaeho">
+                        <li><a href="auteur.html">L'auteur</a></li>
+                        <li><a href="Oeuvres.html">Œuvres </a></li>
+                        <li><a href="Projets.html">Projets</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </td>
+    </tr>
 </header>
-
-<div class="corps">
-    <div id="news1">
-        <img src="paper1.png" width="430px">
-        <div id="inside1"> 
-            <h2>Entrée dans le monde de la littérature</h2>
-            <p font size='14px' >“1111Pater noster, qui es in caelis sanctificetur nomen tuum adveniat regnum tuum fiat voluntas tua sicut in caelo et in terra. 
-                Panem era nos a malo. Amen.”
-            </p>
+<h5>― Emmanuel Meursault ―</h5>
+<article>
+    <div id="tout">
+        <div id="photo"><img src="pp.jpeg" width="300px" box-shadow="0px 5px 20px 0 rgba(49, 46, 42, 0.22)"></div>
+        <div id="part1">
+            <p>Né en 1968, j’ai une formation scientifique et un diplôme d’ingénieur. Mon service militaire
+            m’amènera pour deux ans en Guyane. Un tournant dans ma jeune existence puisque trente ans après
+            j’habite toujours de l’autre coté de l’atlantique où j’enseignais encore récemment les mathématiques
+            en lycée. </p>  
         </div>
-    </div>
-    <div id="news2">
-        <img src="tab.png" width="500px" height="400px">
-        <div id="inside2">
-            <h3>AN 3 APRES COVID</h3>
-            <p>“2222Pater noster, qui es in caelis sanctificetur nomen tuum adveniat regnum tuum inducas in tentationem sed libera nos a malo. Amen.”
-            </p>
+        <div id="part2">
+            <p>Curieux de tout, je n’ai jamais aimé la routine et ai toujours multiplié les défis
+            professionnels. Après avoir monté il y a quelques années une société de BTP, je possède maintenant
+            une structure de promoteur immobilier qui me dégage suffisamment de temps pour me lancer un
+            nouveau challenge : affronter une page blanche, une vieille tentation que j’ai enfin décidé de
+            regarder droit dans les yeux.</p>
         </div>
+        
     </div>
-    <br><br><br>
-    <div id="news3">
-        <img src="tab2.png" width="200">
-        <div id="inside3">
-            <p> Φ </p>
-        </div>
-    </div>
-</div>
-<br><br><br><br>
+</article>
+<br><br><br>
 <footer> 
     <p>
     <a href="https://www.facebook.com"><img src="fb.png" height="40px" width="40px"></a>
@@ -290,26 +382,21 @@
 </footer>
 
 <script>
-    const navSlide = () =>{
-        const menu = document.querySelector('.menu');
-        const nav = document.querySelector('.barre');
-        const laBarre = document.querySelectorAll('.barre li');
 
-        menu.addEventListener('click', () => {
-            
-            nav.classList.toggle('nav-active');
+    var modal = document.getElementById("myModal");
 
-            laBarre.forEach((link,index)=>{
-                if(link.style.animation){
-                    link.style.animation = '';
-                }
-                else{
-                    link.style.animation = `navFade 0.5s ease forwards ${index/7}s`;
-                }
-            });
-        });
+    var img = document.getElementById("h31");
+
+    img.onclick = function(){
+        modal.style.display = "block";
+        
     }
-    navSlide();
+
+    var span = document.getElementsByClassName("close")[0];
+
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
 </script>
 </body>
 </html>

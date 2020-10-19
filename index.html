@@ -21,7 +21,7 @@
         position: fixed;
         width: 100%;
         top: 0;
-        
+        margin-bottom: 30px;
         z-index: 3;
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     
@@ -81,46 +81,37 @@
         background-color: white;
         margin: 5px;
     }
+    .barrelaeho{
+            list-style-type: none;
+            text-align: center;
+        }
+        .barrelaeho a{
+            text-decoration: none;
+            color: white;
+
+        }
+        .barrelaeho li{
+            padding: 10px;
+        }
 
     @media screen and (max-width:900px){
 
         nav{
-            position: relative;
+            position: fixed;
         }
-        
+
         .barre{
-            position: absolute;
-            top:-625%;
-            height: 92vh;
-            z-index: 4;
-            background-color: #000000e1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 50%;
-            transform: translateY(0%);
-            transition: transform 0.5s ease-in;
+            display: none;
+            
         }
-        .barre li{
-            opacity: 0;
-        }
+
+
         .menu{
             display:block;
+            margin: 10px;
         }
     }
-    .nav-active{
-        transform: translateY(125%);
-    }
-    @keyframes navFade{
-        from{
-            opacity: 0;
-            transform: translateX(50px);
-        }
-        to{
-            opacity: 1;
-            transform: translateX(0px)
-        }
-    }
+
 
     footer{
         color: white;
@@ -167,7 +158,7 @@
     }
     #news1{
         padding: 10px;
-        margin-top: 180px;
+        margin-top: 170px;
         position: relative;
         margin-left: auto;
         margin-right: auto;
@@ -255,6 +246,9 @@
         #news1 p{
         margin-left: 0px;
         }
+        #news1{
+            margin-top: 150px;
+        }
         #news1, #news2{
             width: 90%;
         }
@@ -263,14 +257,90 @@
     @media screen and (max-width:500px){
         
         #news1{
-            
-            margin: auto;
+            margin-top: 150px;
+            margin-left: auto;
+            margin-right: auto;
         }
         
     }
     #reseau:hover{
         cursor: pointer;
     }
+
+    
+    .modal {
+        display: none;
+        position: fixed; 
+        z-index: 1; 
+        padding-top: 50px; 
+        margin: auto;
+        right: 0;
+        top: 100px;
+        width: 100%; 
+        height: 58%; 
+        background-color: rgba(0, 0, 0, 0.875);
+        }
+
+        .modal-content {
+        margin: auto;
+        display: block;
+        width: 60%;
+        max-width: 500px;
+        padding: 20px;
+        }
+
+        
+        #caption{
+        margin: auto;
+        display: block;
+        width: 80%;
+        text-align: justify;
+        color: #ccc;
+        font-size: large;
+        
+        z-index: 5;
+
+        -webkit-overflow-scrolling: touch;
+
+        }
+
+        #caption li{
+            margin: auto;
+            padding: 10px;
+        }
+
+
+        
+        .modal-content, #caption{
+        animation-name: zoom;
+        animation-duration: 0.6s;
+        }
+
+        @keyframes zoom {
+            from {
+                transform:scale(0)
+            }
+            to {
+                transform:scale(1)
+            }
+        }
+
+        
+        .close{
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: whitesmoke;
+            font-size: 30px;
+            transition: 0.3s;
+        }
+
+        .close:hover, .close:focus{
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+ 
         
 </style>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -278,7 +348,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="utf-8">
-<title>EDM site</title>
+<title>Accueil - Emmanuel Meursault</title>
 <link rel="shortcut icon" href="em.ico" />
 </head>
 <body>
@@ -296,12 +366,31 @@
             <li><a href="news.html">News</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
-        <div class="menu">
+        <div class="menu" id="h31">
             <div class="top"></div>
             <div class="middle"></div>
             <div class="bottom"></div>
         </div>
+ 
     </nav>
+    <tr>
+        <td id="tdleft">
+            <div id="myModal" class="modal">
+                <span class="close">&times;</span>
+                <div id="caption"> 
+                    <ul class="barrelaeho">
+                        <li><a href="auteur.html">L'auteur</a></li>
+                        <li><a href="Oeuvres.html">Œuvres </a></li>
+                        <li><a href="Projets.html">Projets</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </td>
+    </tr>
+
 </header>
 
 <div class="corps">
@@ -356,26 +445,22 @@
 </footer>
 
 <script>
-    const navSlide = () =>{
-        const menu = document.querySelector('.menu');
-        const nav = document.querySelector('.barre');
-        const laBarre = document.querySelectorAll('.barre li');
 
-        menu.addEventListener('click', () => {
-            
-            nav.classList.toggle('nav-active');
+    var modal = document.getElementById("myModal");
 
-            laBarre.forEach((link,index)=>{
-                if(link.style.animation){
-                    link.style.animation = '';
-                }
-                else{
-                    link.style.animation = `navFade 0.5s ease forwards ${index/7}s`;
-                }
-            });
-        });
+    var img = document.getElementById("h31");
+
+    img.onclick = function(){
+        modal.style.display = "block";
+        
     }
-    navSlide();
+
+    var span = document.getElementsByClassName("close")[0];
+
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+    
 </script>
 </body>
 </html>
